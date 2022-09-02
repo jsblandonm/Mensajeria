@@ -1,0 +1,11 @@
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\bin\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.deps.json
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\bin\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.dll
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\bin\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.pdb
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\bin\Debug\netstandard2.1\DroneOfTheFuture.App.Dominio.dll
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\bin\Debug\netstandard2.1\DroneOfTheFuture.App.Dominio.pdb
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\obj\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.csprojAssemblyReference.cache
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\obj\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\obj\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.AssemblyInfo.cs
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\obj\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.csproj.CopyComplete
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\obj\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.dll
+C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Persistencia\obj\Debug\netstandard2.1\DroneOfTheFuture.App.Persistencia.pdb
