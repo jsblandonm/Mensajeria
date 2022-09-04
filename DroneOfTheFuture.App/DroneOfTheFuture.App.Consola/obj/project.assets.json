@@ -5791,6 +5791,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DroneOfTheFuture.App.Dominio >= 1.0.0",
       "DroneOfTheFuture.App.Persistencia >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0"
     ]
@@ -5819,6 +5820,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj"
+            },
             "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj": {
               "projectPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj"
             }

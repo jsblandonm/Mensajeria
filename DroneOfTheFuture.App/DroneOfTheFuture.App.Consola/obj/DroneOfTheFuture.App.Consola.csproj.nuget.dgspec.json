@@ -25,6 +25,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj"
+              },
               "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj": {
                 "projectPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj"
               }

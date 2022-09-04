@@ -7,6 +7,6 @@ namespace DroneOfTheFuture.App.Dominio
     {
         public string TipoPersona{get;set;}
         public string Direccion {get;set;}
-        // public List<compras> Compras {get;set;}
+        public List<Pedidos> Compras {get;set;}
     }
 }
