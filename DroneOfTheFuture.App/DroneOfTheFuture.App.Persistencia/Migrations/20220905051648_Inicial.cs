@@ -120,11 +120,18 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Satisfacioncliente = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ReportesId = table.Column<int>(type: "int", nullable: true)
+                    ReportesId = table.Column<int>(type: "int", nullable: true),
+                    EmpleadosId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Historicos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Historicos_Personas_EmpleadosId",
+                        column: x => x.EmpleadosId,
+                        principalTable: "Personas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Historicos_Reporte_ReportesId",
                         column: x => x.ReportesId,
@@ -132,6 +139,11 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Historicos_EmpleadosId",
+                table: "Historicos",
+                column: "EmpleadosId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Historicos_ReportesId",

@@ -23,7 +23,7 @@ namespace DroneOfTheFuture.App.Consola
                 Apellidos = "Blandon",
                 NumeroTelefono = "1053858423",
                 Identificacion = "2555414",
-                FechaNacimiento = new DateTime(1997,07,21)
+                FechaNacimiento = new DateTime(1997,07,21),
             };
             _repoPersona.AddPersona(persona);
         }

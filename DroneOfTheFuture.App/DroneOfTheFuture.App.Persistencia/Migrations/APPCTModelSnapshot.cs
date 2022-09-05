@@ -50,6 +50,9 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("EmpleadosId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("ReportesId")
                         .HasColumnType("int");
 
@@ -57,6 +60,8 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmpleadosId");
 
                     b.HasIndex("ReportesId");
 
@@ -201,9 +206,15 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
 
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Historico", b =>
                 {
+                    b.HasOne("DroneOfTheFuture.App.Dominio.Empleado", "Empleados")
+                        .WithMany()
+                        .HasForeignKey("EmpleadosId");
+
                     b.HasOne("DroneOfTheFuture.App.Dominio.Reportes", "Reportes")
                         .WithMany()
                         .HasForeignKey("ReportesId");
+
+                    b.Navigation("Empleados");
 
                     b.Navigation("Reportes");
                 });

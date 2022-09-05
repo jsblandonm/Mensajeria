@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using DroneOfTheFuture.App.Dominio;
 
@@ -20,6 +24,18 @@ namespace DroneOfTheFuture.App.Persitencia
             {
                 optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = DroneOfTheFuture-2");
             }
+        }
+        protected override void OnModelCreating(ModelBuilder modeloBuilder)
+        {
+            // modeloBuilder.Entity<Nombre>()
+            // .HasKey(b=>b.Id);
+            //relacion uno a muchos
+            modeloBuilder.Entity<EmpresaMensajeria>()
+            .HasMany(b=>b.Empleados);
+            // .WithOne(b=>b.Empleados);
+            // modeloBuilder.Entity<Personas>()
+            // .HasMany(b=>b.Empleado)
+            // .WithMany(b=>b.Cliente);
         }
     }
 }
