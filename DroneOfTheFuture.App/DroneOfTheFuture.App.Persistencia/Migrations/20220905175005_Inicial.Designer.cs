@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DroneOfTheFuture.App.Persistencia.Migrations
 {
     [DbContext(typeof(APPCT))]
-    [Migration("20220905051648_Inicial")]
+    [Migration("20220905175005_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

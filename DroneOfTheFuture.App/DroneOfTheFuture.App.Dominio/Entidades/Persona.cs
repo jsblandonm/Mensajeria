@@ -10,5 +10,6 @@ namespace DroneOfTheFuture.App.Dominio
         public DateTime FechaNacimiento {get;set;}
         public string NumeroTelefono {get;set;}
         public string Identificacion {get;set;}
+        // public Cliente clientes{get;set;}
     }
 }
