@@ -13,7 +13,7 @@ namespace DroneOfTheFuture.App.Persitencia
             _appContext = appContext;
         }
 
-        IEnumerable<Persona> IRepositorioPersona.GetAllPacientes()
+        IEnumerable<Persona> IRepositorioPersona.GetAllPersonas()
         {
             return _appContext.Personas;
         }
@@ -35,6 +35,8 @@ namespace DroneOfTheFuture.App.Persitencia
                 personaEncontrada.FechaNacimiento = persona.FechaNacimiento;
                 personaEncontrada.NumeroTelefono = persona.NumeroTelefono;
                 personaEncontrada.Identificacion = persona.Identificacion;
+                personaEncontrada.TipoPersona = Cliente.TipoPersona;
+                personaEncontrada.Direccion = Cliente.Direccion;
 
                 _appContext.SaveChanges();
             }

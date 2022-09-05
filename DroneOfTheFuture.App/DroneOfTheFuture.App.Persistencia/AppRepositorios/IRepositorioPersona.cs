@@ -6,8 +6,9 @@ namespace DroneOfTheFuture.App.Persitencia
 {
     public interface IRepositorioPersona
     {
-        IEnumerable<Persona> GetAllPacientes();
+        IEnumerable<Persona> GetAllPersonas();
         Persona AddPersona(Persona persona);
+
         Persona UpdatePersona(Persona persona);
         void DeletePersona(int idPersona);
         Persona GetPersona(int idPersona);
