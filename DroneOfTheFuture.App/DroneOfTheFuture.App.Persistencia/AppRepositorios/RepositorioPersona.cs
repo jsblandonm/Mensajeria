@@ -35,8 +35,6 @@ namespace DroneOfTheFuture.App.Persitencia
                 personaEncontrada.FechaNacimiento = persona.FechaNacimiento;
                 personaEncontrada.NumeroTelefono = persona.NumeroTelefono;
                 personaEncontrada.Identificacion = persona.Identificacion;
-                personaEncontrada.TipoPersona = Cliente.TipoPersona;
-                personaEncontrada.Direccion = Cliente.Direccion;
 
                 _appContext.SaveChanges();
             }
