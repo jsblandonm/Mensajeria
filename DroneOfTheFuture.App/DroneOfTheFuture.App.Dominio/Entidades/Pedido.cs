@@ -13,7 +13,7 @@ namespace DroneOfTheFuture.App.Dominio
 
         public Empleado Empleados {get;set;}
 
-        public Cliente Clientes {get;set;}
+        public Cliente Cliente {get;set;}
         public EmpresaMensajeria EmpresaMensajeria {get;set;}
         
     }

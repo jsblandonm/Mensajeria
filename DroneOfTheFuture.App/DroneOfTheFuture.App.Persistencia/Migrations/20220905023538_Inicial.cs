@@ -31,7 +31,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Edad = table.Column<int>(type: "int", nullable: false),
+                    FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     NumeroTelefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Identificacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -63,7 +63,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     FechaCreacion = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EstadoEmpleado = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EmpleadosId = table.Column<int>(type: "int", nullable: true),
-                    ClientesId = table.Column<int>(type: "int", nullable: true),
+                    ClienteId = table.Column<int>(type: "int", nullable: true),
                     EmpresaMensajeriaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -76,8 +76,8 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Pedido_Personas_ClientesId",
-                        column: x => x.ClientesId,
+                        name: "FK_Pedido_Personas_ClienteId",
+                        column: x => x.ClienteId,
                         principalTable: "Personas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -139,9 +139,9 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                 column: "ReportesId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pedido_ClientesId",
+                name: "IX_Pedido_ClienteId",
                 table: "Pedido",
-                column: "ClientesId");
+                column: "ClienteId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pedido_EmpleadosId",

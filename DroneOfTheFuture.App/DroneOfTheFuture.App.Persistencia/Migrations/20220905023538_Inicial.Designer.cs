@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DroneOfTheFuture.App.Persistencia.Migrations
 {
-    [DbContext(typeof(APPC))]
-    [Migration("20220902021231_InicialEnayo2")]
-    partial class InicialEnayo2
+    [DbContext(typeof(APPCT))]
+    [Migration("20220905023538_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -72,7 +72,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("ClientesId")
+                    b.Property<int?>("ClienteId")
                         .HasColumnType("int");
 
                     b.Property<int?>("EmpleadosId")
@@ -95,7 +95,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClientesId");
+                    b.HasIndex("ClienteId");
 
                     b.HasIndex("EmpleadosId");
 
@@ -118,8 +118,8 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Edad")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("FechaNacimiento")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Identificacion")
                         .HasColumnType("nvarchar(max)");
@@ -212,9 +212,9 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
 
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Pedidos", b =>
                 {
-                    b.HasOne("DroneOfTheFuture.App.Dominio.Cliente", "Clientes")
-                        .WithMany()
-                        .HasForeignKey("ClientesId");
+                    b.HasOne("DroneOfTheFuture.App.Dominio.Cliente", "Cliente")
+                        .WithMany("Compras")
+                        .HasForeignKey("ClienteId");
 
                     b.HasOne("DroneOfTheFuture.App.Dominio.Empleado", "Empleados")
                         .WithMany()
@@ -224,7 +224,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("EmpresaMensajeriaId");
 
-                    b.Navigation("Clientes");
+                    b.Navigation("Cliente");
 
                     b.Navigation("Empleados");
 
@@ -250,6 +250,11 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.EmpresaMensajeria", b =>
                 {
                     b.Navigation("Empleados");
+                });
+
+            modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Cliente", b =>
+                {
+                    b.Navigation("Compras");
                 });
 #pragma warning restore 612, 618
         }

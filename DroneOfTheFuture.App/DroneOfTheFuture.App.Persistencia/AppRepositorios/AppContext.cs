@@ -3,7 +3,7 @@ using DroneOfTheFuture.App.Dominio;
 
 namespace DroneOfTheFuture.App.Persitencia
 {
-    public class APPC : DbContext
+    public class APPCT : DbContext
     {
         public DbSet<Persona> Personas {get;set;}
         public DbSet<Cliente> Clientes {get;set;}
@@ -18,7 +18,7 @@ namespace DroneOfTheFuture.App.Persitencia
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = DroneOfTheFuture");
+                optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = DroneOfTheFuture-2");
             }
         }
     }
