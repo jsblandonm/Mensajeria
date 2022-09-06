@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DroneOfTheFuture.App.Persistencia.Migrations
 {
     [DbContext(typeof(APPCT))]
-    [Migration("20220905175005_Inicial")]
+    [Migration("20220906011831_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -155,7 +155,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     b.Property<string>("EstadoPaquete")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Feha")
+                    b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nombre")

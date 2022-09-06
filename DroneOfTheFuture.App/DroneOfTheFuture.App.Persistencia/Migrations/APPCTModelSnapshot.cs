@@ -153,7 +153,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     b.Property<string>("EstadoPaquete")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Feha")
+                    b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nombre")

@@ -6,3 +6,11 @@ C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\Dron
 C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\bin\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.pdb
 C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\obj\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.dll
 C:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\obj\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.pdb
+C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\bin\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.deps.json
+C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\bin\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.dll
+C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\bin\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.pdb
+C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\obj\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.csprojAssemblyReference.cache
+C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\obj\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\obj\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.AssemblyInfo.cs
+C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\obj\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.dll
+C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Dominio\obj\Debug\netstandard2.0\DroneOfTheFuture.App.Dominio.pdb

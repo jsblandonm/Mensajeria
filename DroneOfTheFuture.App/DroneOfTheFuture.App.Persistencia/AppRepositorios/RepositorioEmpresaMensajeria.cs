@@ -48,6 +48,9 @@ namespace DroneOfTheFuture.App.Persistencia
             var empresaMensajeriaEncontrada = _appContext.EmpresaMensajerias.FirstOrDefault(em => em.Id == empresaMensajeria.Id);
             if (empresaMensajeriaEncontrada != null)
             {
+                empresaMensajeriaEncontrada.NombreEmpresa = empresaMensajeria.NombreEmpresa;
+                empresaMensajeriaEncontrada.Drieccion = empresaMensajeria.Drieccion;
+                empresaMensajeriaEncontrada.Drones = empresaMensajeria.Drones;
                 empresaMensajeriaEncontrada.NitEmpresa = empresaMensajeria.NitEmpresa;
 
                 _appContext.SaveChanges();
