@@ -29,7 +29,6 @@ namespace DroneOfTheFuture.App.Consola
             // obtenerPersona(1);
             // obtenerCliente(1);
             // obtenerEmpleado(2);
-            // borrarEpleado(2, _repoEmpleado.DeleteEmpleado(2));
 
         }
 
@@ -130,14 +129,11 @@ namespace DroneOfTheFuture.App.Consola
             Console.WriteLine(obtenerEmpleado.Nombre + " " + obtenerEmpleado.Apellidos + " " + obtenerEmpleado.NumeroTelefono);
         }
 
-        // private static void borrarEpleado (int idEmpleado, borrarEpleado)
+        // public static void SearchEnvio()
         // {
-        //     Console.WriteLine("Empleado borrado correctamente");
-        // }
-
-        // private static void obtenerCliente(int idCliente)
-        // {
-        //     Console.WriteLine();
+        //     Random rand = new Random();
+        //     int idPedido = rand.Next(0, 10);
+        //     Pedidos pedidos = _repoPedido.ReadPedidos(idPedido);
         // }
     }
 }
