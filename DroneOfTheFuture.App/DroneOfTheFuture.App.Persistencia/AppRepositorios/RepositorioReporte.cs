@@ -48,11 +48,15 @@ namespace DroneOfTheFuture.App.Persistencia
             var reporteEncontrado = _appContext.Reporte.FirstOrDefault(r => r.Id == reportes.Id);
             if (reporteEncontrado != null)
             {
+<<<<<<< HEAD
                 reporteEncontrado.Nombre = reportes.Nombre;
                 reporteEncontrado.Temperatura = reportes.Temperatura;
                 reporteEncontrado.EstadoDrone = reportes.EstadoDrone;
                 reporteEncontrado.EstadoPaquete = reportes.EstadoPaquete;
                 reporteEncontrado.Fecha = reportes.Fecha;
+=======
+                reporteEncontrado.EstadoPaquete = reportes.EstadoPaquete;
+>>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7
 
                 _appContext.SaveChanges();
             }
