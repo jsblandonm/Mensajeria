@@ -99,7 +99,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     Temperatura = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EstadoDrone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EstadoPaquete = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Feha = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
                     pedidosId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

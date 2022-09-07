@@ -11,7 +11,6 @@ namespace DroneOfTheFuture.App.Persitencia
     {
         IEnumerable<Persona> GetAllPersonas();
         Persona AddPersona(Persona persona);
-
         Persona UpdatePersona(Persona persona);
         void DeletePersona(int idPersona);
         Persona GetPersona(int idPersona);
