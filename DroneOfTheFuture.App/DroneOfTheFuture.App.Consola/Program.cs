@@ -22,17 +22,17 @@ namespace DroneOfTheFuture.App.Consola
         {
             Console.WriteLine("Hello World!");
             // AddPersona();
-            // AddCliente();
-            // AddEmpleado();
-            // AddEmpresaMensajeria();
-            // AddHistorico();
-            // AddPedido();
-            // AddReporte();
+            AddCliente();
+            AddEmpleado();
+            AddEmpresaMensajeria();
+            AddHistorico();
+            AddPedido();
+            AddReporte();
 
             // obtenerPersona(1);
             // obtenerCliente(1);
             // obtenerEmpleado(2);
-            obtenerPersona(1);
+            // obtenerPersona(1);
         }
 
         // private static void AddPersona()
@@ -85,7 +85,7 @@ namespace DroneOfTheFuture.App.Consola
             };
             _repoHistorico.AddHistorico(historico);
         }
-        private static void obtenerPersona(int idPersona)
+        private static void AddEmpresaMensajeria()
         {
             var empresaMesajeria = new EmpresaMensajeria
             {
