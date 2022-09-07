@@ -1,7 +1,3 @@
 is_global = true
 build_property.RootNamespace = DroneOfTheFuture.App.Consola
-<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\jsbla\Desktop\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\
-=======
-build_property.ProjectDir = c:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\
->>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7

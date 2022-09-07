@@ -7,20 +7,14 @@ namespace DroneOfTheFuture.App.Consola
 {
     class Program
     {
-<<<<<<< HEAD
         // private static IRepositorioPersona _repoPersona = new RepositorioPersona(new Persitencia.APPCT());
-=======
+
         private static IRepositorioPersona _repoPersona = new RepositorioPersona(new Persitencia.APPCT());
->>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7
         private static IRepositorioCliente _repoCliente = new RepositorioCliente(new Persitencia.APPCT());
         private static IRepositorioEmpleado _repoEmpleado = new RepositorioEmpleado(new Persitencia.APPCT());
         private static IRepositorioPedido _repoPedido = new RepositorioPedidos(new Persitencia.APPCT());
         private static IRepositorioHistorico _repoHistorico = new RepositorioHistorico(new Persitencia.APPCT());
         private static IRepositorioReporte _repoReporte = new RepositorioReporte(new Persitencia.APPCT());
-<<<<<<< HEAD
-=======
-
->>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7
         private static IRepositorioEmpresaMensajeria _repoEmpresaMensajeria = new RepositorioEmpresaMensajeria(new Persitencia.APPCT());
 
 
@@ -34,14 +28,11 @@ namespace DroneOfTheFuture.App.Consola
             // AddHistorico();
             // AddPedido();
             // AddReporte();
-<<<<<<< HEAD
+
             // obtenerPersona(1);
             // obtenerCliente(1);
             // obtenerEmpleado(2);
-
-=======
             obtenerPersona(1);
->>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7
         }
 
         // private static void AddPersona()
@@ -65,11 +56,9 @@ namespace DroneOfTheFuture.App.Consola
                 NumeroTelefono = "1053858423",
                 Identificacion = "2555414",
                 FechaNacimiento = new DateTime(1997, 07, 21),
-<<<<<<< HEAD
+
                 TipoPersona = "Cliente",
                 Direccion = "Calle Wallaby P.Sherman"
-=======
->>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7
             };
             _repoCliente.AddCliente(cliente);
         }
@@ -87,44 +76,6 @@ namespace DroneOfTheFuture.App.Consola
             };
             _repoEmpleado.AddEmpleado(empleado);
         }
-        private static void AddCliente()
-        {
-            var cliente = new Cliente
-            {
-                TipoPersona = "Cliente",
-                Direccion = "Calle Wallaby P.Sherman"
-            };
-            _repoCliente.AddCliente(cliente);
-        }
-        private static void AddEmpleado()
-        {
-            var empleado = new Empleado
-            {
-                TipoPersona = "Cliente",
-                HorasLaboradas = 8
-            };
-            _repoEmpleado.AddEmpleado(empleado);
-        }
-
-        private static void AddEmpresaMensajeria()
-<<<<<<< HEAD
-=======
-        {
-            var empresaMesajeria = new EmpresaMensajeria
-            {
-                NombreEmpresa = "Las Montañas del Ruis",
-            };
-            _repoEmpresaMensajeria.AddEmpresaMensajeria(empresaMesajeria);
-        }
-
-        private static void AddPedido()
-        {
-            var pedido = new Pedidos
-            {
-                Peso = 12,
-            };
-            _repoPedido.AddPedido(pedido);
-        }
 
         private static void AddHistorico()
         {
@@ -134,17 +85,7 @@ namespace DroneOfTheFuture.App.Consola
             };
             _repoHistorico.AddHistorico(historico);
         }
-
-        private static void AddReporte()
-        {
-            var reporte = new Reportes
-            {
-                Nombre = "Arroz Polludo",
-            };
-            _repoReporte.AddReportes(reporte);
-        }
         private static void obtenerPersona(int idPersona)
->>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7
         {
             var empresaMesajeria = new EmpresaMensajeria
             {
@@ -155,8 +96,6 @@ namespace DroneOfTheFuture.App.Consola
             };
             _repoEmpresaMensajeria.AddEmpresaMensajeria(empresaMesajeria);
         }
-
-<<<<<<< HEAD
         private static void AddPedido()
         {
             var pedido = new Pedidos
@@ -167,15 +106,6 @@ namespace DroneOfTheFuture.App.Consola
                 EstadoEmpleado = "Revisando"
             };
             _repoPedido.AddPedido(pedido);
-        }
-
-        private static void AddHistorico()
-        {
-            var historico = new Historico
-            {
-                Satisfacioncliente = "Mala"
-            };
-            _repoHistorico.AddHistorico(historico);
         }
 
         private static void AddReporte()
@@ -207,11 +137,5 @@ namespace DroneOfTheFuture.App.Consola
         //     int idPedido = rand.Next(0, 10);
         //     Pedidos pedidos = _repoPedido.ReadPedidos(idPedido);
         // }
-=======
-        private static void obtenerCliente(int idCliente)
-        {
-            Console.WriteLine();
-        }
->>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7
     }
 }

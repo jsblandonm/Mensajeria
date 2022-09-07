@@ -47,14 +47,13 @@ namespace DroneOfTheFuture.App.Persistencia
             var pedidoEncontrado = _appContext.Pedido.FirstOrDefault(p => p.Id == pedidos.Id);
             if(pedidoEncontrado != null)
             {
-<<<<<<< HEAD
+
                 pedidoEncontrado.NombrePaquete = pedidos.NombrePaquete;
                 pedidoEncontrado.Peso = pedidos.Peso;
                 pedidoEncontrado.FechaCreacion = pedidos.FechaCreacion;
                 pedidoEncontrado.EstadoEmpleado = pedidos.EstadoEmpleado;
-=======
+
                 pedidoEncontrado.Peso = pedidos.Peso;
->>>>>>> 82f0319ae87c0f74a52d72163b39d34fa0894bc7
 
                 _appContext.SaveChanges();
             }
