@@ -1,7 +1,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using DroneOfTheFuture.App.Dominio;
-using DroneOfTheFuture.App.Persitencia;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,10 +8,14 @@ namespace DroneOfTheFuture.App.Persistencia
 {
     public class RepositorioHistorico : IRepositorioHistorico
     {
-        private readonly APPCT _appcontext;
-        public RepositorioHistorico(APPCT appContext)
+        private readonly AppContexto _appcontext;
+        public RepositorioHistorico(AppContexto appContext)
         {
             _appcontext = appContext;
+        }
+        public RepositorioHistorico()
+        {
+            _appcontext = new AppContexto();
         }
         public Historico AddHistorico(Historico historico)
         {
@@ -48,7 +51,8 @@ namespace DroneOfTheFuture.App.Persistencia
             if (historicoEncontrado != null)
             {
                 historicoEncontrado.Satisfacioncliente = historico.Satisfacioncliente;
-
+                historicoEncontrado.SusReportes = historico.SusReportes;
+                historicoEncontrado.SusEmpleados = historico.SusEmpleados;
                 _appcontext.SaveChanges();
             }
             return historicoEncontrado;

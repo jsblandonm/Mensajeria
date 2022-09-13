@@ -3,16 +3,19 @@ using Microsoft.EntityFrameworkCore;
 using DroneOfTheFuture.App.Dominio;
 using System.Collections.Generic;
 using System.Linq;
-using DroneOfTheFuture.App.Persitencia;
 
 namespace DroneOfTheFuture.App.Persistencia
 {
     public class RepositorioEmpleado : IRepositorioEmpleado
     {
-        private readonly APPCT _appContext;
-        public RepositorioEmpleado(APPCT appContext)
+        private readonly AppContexto _appContext;
+        public RepositorioEmpleado(AppContexto appContext)
         {
             _appContext = appContext;
+        }
+        public RepositorioEmpleado()
+        {
+            _appContext = new AppContexto();
         }
         public Empleado AddEmpleado(Empleado empleado)
         {
@@ -32,7 +35,7 @@ namespace DroneOfTheFuture.App.Persistencia
             _appContext.SaveChanges();
         }
 
-        public IEnumerable<Empleado> GetAllEmpleados()
+        public IEnumerable<Empleado> GetAllEmpleado()
         {
             return _appContext.Empleados;
         }
@@ -49,7 +52,7 @@ namespace DroneOfTheFuture.App.Persistencia
             {
                 empleadoEncontrado.TipoPersona = empleado.TipoPersona;
                 empleadoEncontrado.HorasLaboradas = empleado.HorasLaboradas;
-
+                empleadoEncontrado.SuEmpresa = empleado.SuEmpresa;
                 _appContext.SaveChanges();
             }
             return empleadoEncontrado;

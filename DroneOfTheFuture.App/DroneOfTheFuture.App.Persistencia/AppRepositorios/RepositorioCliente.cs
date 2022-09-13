@@ -1,7 +1,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using DroneOfTheFuture.App.Dominio;
-using DroneOfTheFuture.App.Persitencia;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,10 +9,14 @@ namespace DroneOfTheFuture.App.Persistencia
 {
     public class RepositorioCliente : IRepositorioCliente
     {
-        private readonly APPCT _appContext;
-        public RepositorioCliente(APPCT appContext)
+        private readonly AppContexto _appContext;
+        public RepositorioCliente(AppContexto appContext)
         {
             _appContext = appContext;
+        }
+        public RepositorioCliente()
+        {
+            _appContext = new AppContexto();
         }
         public Cliente AddCliente(Cliente cliente)
         {
@@ -21,7 +24,6 @@ namespace DroneOfTheFuture.App.Persistencia
             _appContext.SaveChanges();
             return clienteAgregado.Entity;
         }
-
         public void DeleteCliente(int idCliente)
         {
             var clienteEncontrado = _appContext.Clientes.FirstOrDefault(c => c.Id == idCliente);
@@ -50,6 +52,7 @@ namespace DroneOfTheFuture.App.Persistencia
             {
                 clienteEncontrado.TipoPersona = cliente.TipoPersona;
                 clienteEncontrado.Direccion = cliente.Direccion;
+                clienteEncontrado.Compras = cliente.Compras;
 
                 _appContext.SaveChanges();
             }

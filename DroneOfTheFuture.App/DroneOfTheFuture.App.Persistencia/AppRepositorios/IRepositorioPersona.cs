@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using DroneOfTheFuture.App.Dominio;
 
-namespace DroneOfTheFuture.App.Persitencia
+namespace DroneOfTheFuture.App.Persistencia
 {
     public interface IRepositorioPersona
     {
-        IEnumerable<Persona> GetAllPersonas();
+        IEnumerable<Persona> GetAllPersona();
         Persona AddPersona(Persona persona);
         Persona UpdatePersona(Persona persona);
         void DeletePersona(int idPersona);

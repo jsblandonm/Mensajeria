@@ -1,7 +1,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using DroneOfTheFuture.App.Dominio;
-using DroneOfTheFuture.App.Persitencia;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,12 +8,14 @@ namespace DroneOfTheFuture.App.Persistencia
 {
     public class RepositorioReporte : IRepositorioReporte
     {
-        private readonly APPCT _appContext;
-        public RepositorioReporte(APPCT appContext)
+        private readonly AppContexto _appContext;
+        public RepositorioReporte(AppContexto appContext)
         {
             _appContext = appContext;
         }
-
+        public RepositorioReporte (){
+            _appContext = new AppContexto();
+        }
         public Reportes AddReportes(Reportes reportes)
         {
             var reporteAgregado = _appContext.Reporte.Add(reportes);
@@ -33,7 +34,7 @@ namespace DroneOfTheFuture.App.Persistencia
             _appContext.SaveChanges();
         }
 
-        public IEnumerable<Reportes> GetAllReportes()
+        public IEnumerable<Reportes> GetAllReporte()
         {
             return _appContext.Reporte;
         }
@@ -48,12 +49,12 @@ namespace DroneOfTheFuture.App.Persistencia
             var reporteEncontrado = _appContext.Reporte.FirstOrDefault(r => r.Id == reportes.Id);
             if (reporteEncontrado != null)
             {
-                reporteEncontrado.Nombre = reportes.Nombre;
-                reporteEncontrado.Temperatura = reportes.Temperatura;
+                reporteEncontrado.NombreDelReporte = reportes.NombreDelReporte;
+                reporteEncontrado.TemperaturaDelaZona = reportes.TemperaturaDelaZona;
                 reporteEncontrado.EstadoDrone = reportes.EstadoDrone;
                 reporteEncontrado.EstadoPaquete = reportes.EstadoPaquete;
                 reporteEncontrado.Fecha = reportes.Fecha;
-                reporteEncontrado.EstadoPaquete = reportes.EstadoPaquete;
+                reporteEncontrado.pedidos = reportes.pedidos;
                 _appContext.SaveChanges();
             }
             return reporteEncontrado;

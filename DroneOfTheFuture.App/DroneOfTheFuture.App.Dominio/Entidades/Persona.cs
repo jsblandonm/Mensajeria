@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace DroneOfTheFuture.App.Dominio
 {
@@ -8,8 +9,10 @@ namespace DroneOfTheFuture.App.Dominio
         public string Nombre {get;set;}
         public string Apellidos {get;set;}
         public DateTime FechaNacimiento {get;set;}
-        public string NumeroTelefono {get;set;}
+        public string NumeroDeTelefono {get;set;}
         public string Identificacion {get;set;}
-        // public Cliente clientes{get;set;}
+        public ICollection<Cliente> LosClientes{get;set;}
+        public ICollection<Empleado> empleados{get;set;}
+
     }
 }

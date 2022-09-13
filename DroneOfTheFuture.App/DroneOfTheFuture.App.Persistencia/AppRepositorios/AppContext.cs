@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using DroneOfTheFuture.App.Dominio;
 
-namespace DroneOfTheFuture.App.Persitencia
+namespace DroneOfTheFuture.App.Persistencia
 {
-    public class APPCT : DbContext
+    public class AppContexto : DbContext
     {
-        public DbSet<Persona> Personas {get;set;}
+        // public DbSet<Persona> Personas {get;set;}
         public DbSet<Cliente> Clientes {get;set;}
         public DbSet<Empleado> Empleados {get;set;}
-        public DbSet<EmpresaMensajeria> EmpresaMensajerias {get;set;}
+        public DbSet<Mensajeria> EmpresaDeMensajeria {get;set;}
         public DbSet<Historico> Historicos {get;set;}
         public DbSet<Reportes> Reporte {get;set;}
         public DbSet<Pedidos> Pedido {get;set;}
@@ -25,17 +25,17 @@ namespace DroneOfTheFuture.App.Persitencia
                 optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = DroneOfTheFuture-2");
             }
         }
-        protected override void OnModelCreating(ModelBuilder modeloBuilder)
-        {
-            // modeloBuilder.Entity<Nombre>()
-            // .HasKey(b=>b.Id);
-            //relacion uno a muchos
-            modeloBuilder.Entity<EmpresaMensajeria>()
-            .HasMany(b=>b.Empleados);
-            // .WithOne(b=>b.Empleados);
-            // modeloBuilder.Entity<Personas>()
-            // .HasMany(b=>b.Empleado)
-            // .WithMany(b=>b.Cliente);
-        }
+        // protected override void OnModelCreating(ModelBuilder modeloBuilder)
+        // {
+        //     // modeloBuilder.Entity<Nombre>()
+        //     // .HasKey(b=>b.Id);
+        //     //relacion uno a muchos
+        //     // modeloBuilder.Entity<Mensajeria>()
+        //     // .HasMany(b=>b.Empleados);
+        //     // .WithOne(b=>b.Empleados);
+        //     // modeloBuilder.Entity<Personas>()
+        //     // .HasMany(b=>b.Empleado)
+        //     // .WithMany(b=>b.Cliente);
+        // }
     }
 }

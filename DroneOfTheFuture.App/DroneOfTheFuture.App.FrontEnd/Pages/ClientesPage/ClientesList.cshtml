@@ -1,0 +1,37 @@
+﻿@page
+@model ClientesModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Direccion</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Numero de telefono</th>
+            <th>Identificacion</th>
+            <th>Acciones</th>
+        </tr>
+
+
+
+        @foreach (var cliente in Model.listaClientes)
+        {
+            <tr>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Apellidos</td>
+                <td>@cliente.Direccion</td>
+                <td>@cliente.FechaNacimiento</td>
+                <td>@cliente.NumeroDeTelefono</td>
+                <td>@cliente.Identificacion</td>
+                <td>@cliente.Id</td>
+                <td><a class="btn btn-primary table-btn" asp-page = "../ClientesPage/ClientesDetalles.cshtml"><i class="fas fas-info-circle"></i>Detalles</a></td>
+
+            </tr>
+        }
+        <table></table>
+    </table>
+</div>

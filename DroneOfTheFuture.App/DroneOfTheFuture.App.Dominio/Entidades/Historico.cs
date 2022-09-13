@@ -6,7 +6,7 @@ namespace DroneOfTheFuture.App.Dominio
     {
         public int Id {get;set;}
         public string Satisfacioncliente {get;set;}
-        public Reportes Reportes{get;set;}
-        public Empleado Empleados{get;set;}
+        public Reportes SusReportes{get;set;}
+        public Empleado SusEmpleados{get;set;}
     }
 }

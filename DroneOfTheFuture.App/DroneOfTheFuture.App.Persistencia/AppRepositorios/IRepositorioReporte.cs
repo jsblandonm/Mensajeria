@@ -9,9 +9,9 @@ namespace DroneOfTheFuture.App.Persistencia
 {
     public interface IRepositorioReporte
     {
-        IEnumerable<Reportes> GetAllReportes();
-        Reportes AddReportes (Reportes reportes);
-        Reportes UpdateReportes (Reportes reportes);
+        IEnumerable<Reportes> GetAllReporte();
+        Reportes AddReportes (Reportes reporte);
+        Reportes UpdateReportes (Reportes reporte);
         void DeleteReportes (int idReportes);
         Reportes GetReportes (int idReportes);
     }

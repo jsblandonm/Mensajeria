@@ -1,7 +1,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using DroneOfTheFuture.App.Dominio;
-using DroneOfTheFuture.App.Persitencia;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,10 +8,13 @@ namespace DroneOfTheFuture.App.Persistencia
 {
     public class RepositorioPedidos : IRepositorioPedido
     {
-        private readonly APPCT _appContext;
-        public RepositorioPedidos(APPCT appContext)
+        private readonly AppContexto _appContext;
+        public RepositorioPedidos(AppContexto appContext)
         {
             _appContext = appContext;
+        }
+                public RepositorioPedidos (){
+            _appContext = new AppContexto();
         }
         public Pedidos AddPedido(Pedidos pedidos)
         {
@@ -48,10 +50,13 @@ namespace DroneOfTheFuture.App.Persistencia
             if(pedidoEncontrado != null)
             {
 
-                pedidoEncontrado.NombrePaquete = pedidos.NombrePaquete;
+                pedidoEncontrado.NombreDelPaquete = pedidos.NombreDelPaquete;
                 pedidoEncontrado.Peso = pedidos.Peso;
                 pedidoEncontrado.FechaCreacion = pedidos.FechaCreacion;
-                pedidoEncontrado.EstadoEmpleado = pedidos.EstadoEmpleado;
+                pedidoEncontrado.EstadoDelPedido = pedidos.EstadoDelPedido;
+                pedidoEncontrado.SuComprador = pedidos.SuComprador;
+                pedidoEncontrado.SuEncargado = pedidos.SuEncargado;
+                pedidoEncontrado.SuEmpresaDeMensajeria = pedidos.SuEmpresaDeMensajeria;
 
                 pedidoEncontrado.Peso = pedidos.Peso;
 
