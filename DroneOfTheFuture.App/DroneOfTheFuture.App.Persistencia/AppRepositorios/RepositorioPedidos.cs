@@ -51,6 +51,7 @@ namespace DroneOfTheFuture.App.Persistencia
             var pedidoEncontrado = _appContext.Pedido.FirstOrDefault(p => p.Id == pedidos.Id);
             if(pedidoEncontrado != null)
             {
+<<<<<<< HEAD
 
                 pedidoEncontrado.NombreDelPaquete = pedidos.NombreDelPaquete;
                 pedidoEncontrado.Peso = pedidos.Peso;
@@ -61,7 +62,12 @@ namespace DroneOfTheFuture.App.Persistencia
                 pedidoEncontrado.SuEmpresaDeMensajeria = pedidos.SuEmpresaDeMensajeria;
                 pedidoEncontrado.SuComprador.Compras = pedidos.SuComprador.Compras;
 
+=======
+                pedidoEncontrado.NombrePaquete = pedidos.NombrePaquete;
+>>>>>>> 18b9cac3539ee569ac6073039bbabfd5195364ee
                 pedidoEncontrado.Peso = pedidos.Peso;
+                pedidoEncontrado.FechaCreacion = pedidos.FechaCreacion;
+                pedidoEncontrado.EstadoEmpleado = pedidos.EstadoEmpleado;
 
                 _appContext.SaveChanges();
             }

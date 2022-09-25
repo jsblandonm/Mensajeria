@@ -14,5 +14,6 @@ namespace DroneOfTheFuture.App.Persistencia
         Pedidos UpdatePedidos (Pedidos pedido);
         void DeletePedido(int idPedido);
         Pedidos GetPedidos(int idPedido);
+        // Pedidos ReadPedidos(int idPedido);
     }
 }

@@ -8945,11 +8945,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD:DroneOfTheFuture.App/DroneOfTheFuture.App.FrontEnd/obj/project.assets.json
       "projectUniqueName": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.FrontEnd\\DroneOfTheFuture.App.FrontEnd.csproj",
       "projectName": "DroneOfTheFuture.App.FrontEnd",
       "projectPath": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.FrontEnd\\DroneOfTheFuture.App.FrontEnd.csproj",
       "packagesPath": "C:\\Users\\jsbla\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.FrontEnd\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj",
+      "projectName": "DroneOfTheFuture.App.Persistencia",
+      "projectPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\jsbla\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\obj\\",
+>>>>>>> 18b9cac3539ee569ac6073039bbabfd5195364ee:DroneOfTheFuture.App/DroneOfTheFuture.App.Persistencia/obj/project.assets.json
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jsbla\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -8963,11 +8971,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+<<<<<<< HEAD:DroneOfTheFuture.App/DroneOfTheFuture.App.FrontEnd/obj/project.assets.json
             "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {
               "projectPath": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj"
             },
             "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj": {
               "projectPath": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj"
+=======
+            "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj"
+>>>>>>> 18b9cac3539ee569ac6073039bbabfd5195364ee:DroneOfTheFuture.App/DroneOfTheFuture.App.Persistencia/obj/project.assets.json
             }
           }
         }
