@@ -41,6 +41,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -78,6 +82,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj"
+              },
               "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj": {
                 "projectPath": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Persistencia\\DroneOfTheFuture.App.Persistencia.csproj"
               }
@@ -92,6 +99,30 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

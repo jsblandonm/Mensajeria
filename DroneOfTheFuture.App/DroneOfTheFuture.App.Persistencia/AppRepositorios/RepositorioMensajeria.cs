@@ -9,6 +9,7 @@ namespace DroneOfTheFuture.App.Persistencia
     public class RepositorioMensajeria : IRepositorioMensajeria
     {
         private readonly AppContexto _appContext;
+        
         public RepositorioMensajeria(AppContexto appContext)
         {
             _appContext = appContext;

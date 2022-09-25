@@ -1,0 +1,24 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.MensajeriasPage.MensajeriaDetalles
+@{
+    ViewData["Title"] = "MensajeriaDetalles";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <table>
+        <table class="table">
+            <tr>
+                <th>Cantidad de drones</th>
+                <th>Empleado a cargo</th>
+                <th>Fecha de despacho</th>
+            </tr>
+            <tr>
+                <td>@Model.laMensajeria.Drones</td>
+                <td>@Model.laMensajeria.Empleados</td>
+                <td>@Model.laMensajeria.Drieccion</td>
+            </tr>
+        </table>
+    </table>
+</div>

@@ -1,0 +1,39 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.ReportesPage.DetallesReportes
+@{
+    ViewData["Title"] = "DetallesReportes";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <table>
+        <table class="table">
+            <tr>
+                <th>Nombre del Reporte</th>
+                <th>Temperatura ambiente</th>
+                <th>Estado del Drone</th>
+                <th>El estado del paquete</th>
+                <th>Fecha de envio</th>
+                <th>el Pedido</th>
+            </tr>
+            <tr>
+                <td>@Model.elReporte.NombreDelReporte</td>
+                <td>@Model.elReporte.TemperaturaDelaZona</td>
+                <td>@Model.elReporte.EstadoDrone</td>
+                <td>@Model.elReporte.EstadoPaquete</td>
+                <td>@Model.elReporte.Fecha</td>
+                <td>@Model.elReporte.pedidos.NombreDelPaquete</td>
+                @* <td>
+                    @foreach (var compraa in @Model.elReporte.pedidos)
+                    {
+                        <p>
+                            @compraa.GetType().ToString();
+                        </p>
+
+                    }
+                </td> *@
+            </tr>
+        </table>
+    </table>
+</div>

@@ -1,12 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace DroneOfTheFuture.App.Dominio
 {
     public class Cliente : Persona
     {
-        public string TipoPersona{get;set;}
-        public string Direccion {get;set;}
-        public ICollection<Pedidos> Compras {get;set;}
+        [Required]
+        public string TipoPersona { get; set; }
+        [Required]
+        public string Direccion { get; set; }
+        // [Required]
+        public ICollection<Pedidos> Compras { get; set; }
     }
 }

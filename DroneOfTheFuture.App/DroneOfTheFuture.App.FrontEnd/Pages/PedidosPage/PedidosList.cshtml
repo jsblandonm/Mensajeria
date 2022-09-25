@@ -1,0 +1,38 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.PedidosPage.PedidosList
+@{
+    ViewData["Title"] = "PedidosList";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <table class="table">
+        <tr>
+            <th>Nombre Del Paquete</th>
+            @* <th>Peso</th> *@
+            <th>Fecha de Despacho</th>
+            <th>Estado Del Pedido</th>
+            @* <th>Su Encargado</th>
+            <th>Su Comprador</th>
+            <th>Su EmpresaDeMensajeria</th>
+            <th>Accion</th> *@
+        </tr>
+        @foreach (var Pedido in Model.listaPedidos)
+        {
+            <tr>
+                <td>@Pedido.NombreDelPaquete</td>
+                @* <td>@Pedido.Peso</td> *@
+                <td>@Pedido.FechaCreacion</td>
+                <td>@Pedido.EstadoDelPedido</td>
+                @* <td>@Pedido.SuEncargado</td>
+                <td>@Pedido.SuComprador</td>
+                <td>@Pedido.SuEmpresaDeMensajeria</td> *@
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesPedido"
+                    asp-route-pedidosId="@Pedido.Id"><i class="fas fas-info-circle"></i>Detalles</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

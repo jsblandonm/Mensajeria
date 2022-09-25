@@ -41,7 +41,7 @@ namespace DroneOfTheFuture.App.Persistencia
 
         public Reportes GetReportes(int idReportes)
         {
-            return _appContext.Reporte.FirstOrDefault(r => r.Id == idReportes);
+            return _appContext.Reporte.Where(r => r.Id == idReportes).Include(r => r.pedidos).FirstOrDefault();
         }
 
         public Reportes UpdateReportes(Reportes reportes)

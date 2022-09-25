@@ -1,5 +1,8 @@
 @page
-@model DroneOfTheFuture.App.FrontEnd.Pages.ClientesPage.ClientesDetalles
+@model DroneOfTheFuture.App.FrontEnd.Pages.ClientesPage.ClientesDetalles;
+
+
+
 @{
     ViewData["Title"] = "ClientesDetalles";
 }
@@ -8,18 +11,29 @@
 
 <div>
     <table>
+        <table class=" table">
+            <tr>
+                <th>Su Direccion</th>
+                <th>Su identificacion</th>
+                <th>Su fehca de Nacimiento</th>
+                <th>Su nuemro de telefono</th>
+                <th>Compras</th>
+            </tr>
+            <tr>
+                <td>@Model.elCliente.Direccion</td>
+                <td>@Model.elCliente.Identificacion</td>
+                <td>@Model.elCliente.FechaNacimiento</td>
+                <td>@Model.elCliente.NumeroDeTelefono</td>
+                <td>
+                    @foreach (var compra in @Model.elCliente.Compras)
+                    {
+                        <p>
+                            @compra.NombreDelPaquete
+                        </p>
+                    }
+                </td>
 
-        <tr>
-            <th>Su pedido</th>
-            <th>Tipo de Persona</th>
-            <th>Su Direccion</th>
-        </tr>
-        <tr>
-            <td>@Model.elCliente.Compras</td>
-            <td>@Model.elCliente.TipoPersona</td>
-            <td>@Model.elCliente.Direccion</td>
-
-        </tr>
-
+            </tr>
+        </table>
     </table>
-</div>
+    <a asp-page="./ClientesList" class="btn-default"> Retornar</a>

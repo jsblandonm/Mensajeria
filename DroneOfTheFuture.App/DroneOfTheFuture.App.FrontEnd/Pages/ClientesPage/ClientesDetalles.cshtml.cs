@@ -7,23 +7,35 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using DroneOfTheFuture.App.Persistencia;
 using DroneOfTheFuture.App.Dominio;
+using DroneOfTheFuture.App.FrontEnd.Pages.PedidosPage;
+
 
 namespace DroneOfTheFuture.App.FrontEnd.Pages.ClientesPage
 {
     public class ClientesDetalles : PageModel
     {
-        private readonly IRepositorioCliente _repoCliente;
-
+        public readonly IRepositorioCliente repositorioCliente;
+        public readonly IRepositorioPedido repositorioPedido;
         public Cliente elCliente;
 
         public ClientesDetalles()
         {
-            _repoCliente = new RepositorioCliente();
-        }
+            repositorioPedido = new RepositorioPedidos();
+            repositorioCliente = new RepositorioCliente();
 
-        public void OnGet(int clienteId)
+        }
+        public IActionResult OnGet(int idCliente)
         {
-            Cliente elCliente = _repoCliente.GetCliente(clienteId);
+            elCliente = repositorioCliente.GetCliente(idCliente);
+            // elCliente.Compras = _repoPedidos.GetPedidos(idCliente);
+            if (elCliente == null)
+            {
+                return RedirectToPage("./ErrorBusqueda");
+            }
+            else
+            {
+                return Page();
+            }
         }
     }
 }

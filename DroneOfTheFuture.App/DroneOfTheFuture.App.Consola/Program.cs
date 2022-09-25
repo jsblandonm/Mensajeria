@@ -20,7 +20,8 @@ namespace DroneOfTheFuture.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            AddPersona();
+            // AddPersona();
+            // AddPersonaNueva();
             // AddCliente();
             // AddEmpleado();
             // AddMensajeria();
@@ -30,135 +31,198 @@ namespace DroneOfTheFuture.App.Consola
         }
         private static void AddPersona()
         {
-            Collection<Cliente> losclientes = new Collection<Cliente>();
-            // losclientes.Add(Cliente);
             Collection<Pedidos> lospedidos = new Collection<Pedidos>();
-            // lospedidos.Add();
             var cliente = new Cliente
             {
-                Nombre = "Sebas",
-                Apellidos = "Blandon",
-                FechaNacimiento = new DateTime(1997, 07, 21),
-                NumeroDeTelefono = "320589485",
-                Identificacion = "1053858423",
-                TipoPersona = "Cliente",
-                Direccion = "Calle Wallaby P.Sherman",
+                Nombre = "Alison",
+                Apellidos = "Sandino",
+                FechaNacimiento = new DateTime(1997, 07, 21, 12, 25, 0),
+                NumeroDeTelefono = "31515325",
+                Identificacion = "10584354",
+                TipoPersona = "Compradora compulsiva",
+                Direccion = "Guanuajato",
                 Compras = lospedidos,
-                // clientes = Cliente,
+                // Compras = new Collection<Pedidos> {
+                //     new Pedidos{
+                //         NombreDelPaquete = "Ropa",
+                //         Peso = 15,
+                //         FechaCreacion = new DateTime(2022, 09, 03,12,24,25),
+                //         EstadoDelPedido = "En ditribucion",
+                //         // SuEncargado = empleado,
+                //         // SuComprador = cliente,
+                //         // SuEmpresaDeMensajeria = mensajeria
+                //     }
+                // },
+                
             };
 
-            var mensajeria = new Mensajeria
-            {
-                NombreEmpresa = "Las Montañas del Ruis",
-                Drieccion = "Cerca a las colinas",
-                Drones = 69,
-                NitEmpresa = "515415L",
-                EstadoDrone = "En Servicio"
-                // Empleados = SusEmpleados
-            };
+            _repoCliente.AddCliente(cliente);
+
             var empleado = new Empleado
             {
-                Nombre = "Robert",
-                Apellidos = "Andres",
-                FechaNacimiento = new DateTime(2000, 06, 01),
-                NumeroDeTelefono = "3127592134",
-                Identificacion = "1053823290",
+                Nombre = "Robinson",
+                Apellidos = "Roberto",
+                FechaNacimiento = new DateTime(2000, 06, 01, 08, 22, 29),
+                NumeroDeTelefono = "14514",
+                Identificacion = "10",
                 TipoPersona = "Empleado",
-                HorasLaboradas = 8,
-                SuEmpresa = mensajeria
+                HorasLaboradas = 19,
             };
+            // _repoEmpleado.AddEmpleado(empleado);
+
             Collection<Empleado> SusEmpleados = new Collection<Empleado>();
             SusEmpleados.Add(empleado);
 
+            var mensajeria = new Mensajeria
+            {
+                NombreEmpresa = "Instatime",
+                Drieccion = "Cerca a als nubes",
+                Drones = 69,
+                NitEmpresa = "5151A",
+                EstadoDrone = "En Servicio",
+                Empleados = SusEmpleados
+            };
+            _repoMensajeria.AddMensajeria(mensajeria);
+
             var compras = new Pedidos
             {
-                NombreDelPaquete = "EL Delicius",
+                NombreDelPaquete = "Maquillaje",
                 Peso = 12,
-                FechaCreacion = new DateTime(2022, 09, 03),
+                FechaCreacion = new DateTime(2022, 09, 03, 12, 24, 25),
                 EstadoDelPedido = "En Reparto",
                 SuEncargado = empleado,
                 SuComprador = cliente,
                 SuEmpresaDeMensajeria = mensajeria
             };
 
+            var clienteactualizar = _repoCliente.GetCliente(cliente.Id);
+            clienteactualizar.Compras.Add(compras);
+            _repoCliente.UpdateCliente(clienteactualizar);
+
             var reporte = new Reportes
             {
-                NombreDelReporte = "Arroz Polludo",
+                NombreDelReporte = "El bonito",
                 TemperaturaDelaZona = "25°C",
-                EstadoDrone = "En Recarga",
-                EstadoPaquete = "Entregado",
+                EstadoDrone = "En Servicio",
+                EstadoPaquete = "en Reparto",
                 Fecha = new DateTime(2022, 06, 09),
-                pedidos = compras
+                // pedidos = compras
             };
 
             var historico = new Historico
             {
-                Satisfacioncliente = "Regular",
+                Satisfacioncliente = "Buena",
                 SusReportes = reporte,
-                SusEmpleados = empleado
             };
             _repoHistorico.AddHistorico(historico);
-            _repoReporte.AddReportes(reporte);
-            _repoMensajeria.AddMensajeria(mensajeria);
-            _repoEmpleado.AddEmpleado(empleado);
-            _repoPedido.AddPedido(compras);
-            _repoCliente.AddCliente(cliente);
-        }
-        // private static void AddPersona()
-        // {
-        //     var persona = new Persona
-        //     {
-        //         Nombre = "lucas",
-        //         Apellidos = "Rodriguez",
-        //         NumeroTelefono = "1",
-        //         Identificacion = "25",
-        //         FechaNacimiento = new DateTime(1800, 02, 04),
-        //     };
-        //     _repoPersona.AddPersona(persona);
-        // }
 
-        // private static void AddPedido()
-        // {
-        //     var compras = new Pedidos
-        //     {
-        //         NombreDelPaquete = "EL Delicius",
-        //         Peso = 12,
-        //         FechaCreacion = new DateTime(2022, 09, 03),
-        //         EstadoDelPedido = "Revisando",
-        //     };
-        // }
-        // private static void AddEmpleado()
+            var reporteactualizado = _repoReporte.GetReportes(reporte.Id);
+            reporteactualizado.pedidos = compras;
+            _repoReporte.UpdateReportes(reporteactualizado);
+
+            var empeleadoActualizar = _repoEmpleado.GetEmpleado(empleado.Id);
+            empeleadoActualizar.historico = historico;
+            _repoEmpleado.UpdateEmpleado(empeleadoActualizar);
+
+            // _repoReporte.AddReportes(reporte);
+            // _repoPedido.AddPedido(compras);
+        }
+        // private static void AddPersonaNueva()
         // {
         //     var empleado = new Empleado
         //     {
         //         Nombre = "Robert",
         //         Apellidos = "Andres",
-        //         NumeroTelefono = "25",
-        //         Identificacion = "454",
-        //         FechaNacimiento = new DateTime(2000, 06, 01),
-        //         TipoPersona = "Empleado",
-        //         HorasLaboradas = 8
+        //         FechaNacimiento = new DateTime(2000, 06, 01, 07, 24, 5),
+        //         NumeroDeTelefono = "3127592134",
+        //         Identificacion = "1053823290",
+        //         TipoPersona = "El encargado",
+        //         HorasLaboradas = 8,
         //     };
+
         //     _repoEmpleado.AddEmpleado(empleado);
-        // }
 
-        // private static void AddHistorico()
-        // {
+        //     var mensajeria = new Mensajeria
+        //     {
+        //         NombreEmpresa = "Las Montañas del Ruis",
+        //         Drieccion = "Cerca a las colinas",
+        //         Drones = 69,
+        //         NitEmpresa = "515415L",
+        //         EstadoDrone = "En Servicio",
+        //         Empleados = new Collection<Empleado>{
+        //             empleado
+        //         }
+        //     };
+        //     _repoMensajeria.AddMensajeria(mensajeria);
+
+        //     var compras = new Pedidos
+        //     {
+        //         NombreDelPaquete = "EL Delicius",
+        //         Peso = 12,
+        //         FechaCreacion = new DateTime(2022, 09, 03),
+        //         EstadoDelPedido = "En Reparto",
+        //         SuEncargado = empleado,
+        //         // SuComprador = cliente,
+        //         SuEmpresaDeMensajeria = mensajeria
+        //     };
+
+
+        //     var cliente = new Cliente
+        //     {
+        //         Nombre = "Sebas",
+        //         Apellidos = "Blandon",
+        //         FechaNacimiento = new DateTime(1997, 07, 21),
+        //         NumeroDeTelefono = "320589485",
+        //         Identificacion = "1053858423",
+        //         TipoPersona = "Cliente",
+        //         Direccion = "Calle Wallaby P.Sherman",
+        //         Compras = new Collection<Pedidos> {
+        //             compras,
+        //             // new Pedidos {
+        //             //     NombreDelPaquete = "Los Morosos",
+        //             //     Peso = 3,
+        //             //     FechaCreacion = new DateTime (2022,08,32,25,26,55),
+        //             //     EstadoDelPedido = "En zona de reparto",
+        //             //     SuEncargado = empleado,
+        //             //     SuEmpresaDeMensajeria = mensajeria
+        //             //     // SuComprador = cliente,
+        //             // }
+        //         }
+        //     };
+
+        //     var clienteactualizar = _repoCliente.GetCliente(cliente.Id);
+        //     clienteactualizar.Compras.Add(compras);
+        //     _repoCliente.UpdateCliente(clienteactualizar);
+
+        //     _repoCliente.AddCliente(cliente);
+
+        //     var reporte = new Reportes
+        //     {
+        //         NombreDelReporte = "Reporte Primario",
+        //         TemperaturaDelaZona = "25°C",
+        //         EstadoDrone = "En Recarga",
+        //         EstadoPaquete = "Entregado",
+        //         Fecha = new DateTime(2022, 06, 09),
+        //         pedidos = compras,
+        //         // pedidos = compras
+        //     };
+
+        //     var historico = new Historico
+        //     {
+        //         Satisfacioncliente = "Regular",
+        //         SusReportes = reporte,
+        //     };
+        //     _repoHistorico.AddHistorico(historico);
+
+        //         var reporteactualizado = _repoReporte.GetReportes(reporte.Id);
+        //         reporteactualizado.pedidos = compras;
+        //         _repoReporte.UpdateReportes(reporteactualizado);
+
+        //         var empeleadoActualizar = _repoEmpleado.GetEmpleado(empleado.Id);
+        //         empeleadoActualizar.historico = historico;
+        //         _repoEmpleado.UpdateEmpleado(empeleadoActualizar);
 
         // }
-        // private static void AddReporte()
-        // {
-
-        // }
-        // private static void obtenerCliente(int idCliente)
-        // {
-        //     var clienteEncontrado = _repoCliente.GetCliente(idCliente);
-        //     Console.WriteLine(clienteEncontrado.Nombre + " " + clienteEncontrado.Apellidos + " " + clienteEncontrado.NumeroTelefono);
-        // }
-        // private static void obtenerEmpleado(int idEmpleado)
-        // {
-        //     var obtenerEmpleado = _repoEmpleado.GetEmpleado(idEmpleado);
-        //     Console.WriteLine(obtenerEmpleado.Nombre + " " + obtenerEmpleado.Apellidos + " " + obtenerEmpleado.NumeroTelefono);
     }
 }
 

@@ -21,20 +21,32 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/ClientesPage/ClientesList">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area=""
+                                asp-page="/EmpleadosPage/EmpleadosList">Empleados</a>
+                        </li>
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area=""
+                                asp-page="/HistoricoPage/HistoricoList">Historicos</a>
+                        </li> *@
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area=""
+                                asp-page="/MensajeriasPage/MensajeriaList">Mensajeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/PedidosPage/PedidosList">Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/ReportesPage/ReportesList">Reportes</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" className = "texto">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -42,7 +54,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - DroneOfTheFuture.App.FrontEnd - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022 - DroneOfTheFuture - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 

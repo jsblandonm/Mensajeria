@@ -42,7 +42,7 @@ namespace DroneOfTheFuture.App.Persistencia
 
         public Historico GetHistorico(int idHistorico)
         {
-            return _appcontext.Historicos.FirstOrDefault(h => h.Id == idHistorico);
+            return _appcontext.Historicos.Where(h => h.Id == idHistorico).Include(h => h.SusReportes).Include(h => h.SusReportes.pedidos).FirstOrDefault();
         }
 
         public Historico UpdateHistorico(Historico historico)
@@ -52,7 +52,6 @@ namespace DroneOfTheFuture.App.Persistencia
             {
                 historicoEncontrado.Satisfacioncliente = historico.Satisfacioncliente;
                 historicoEncontrado.SusReportes = historico.SusReportes;
-                historicoEncontrado.SusEmpleados = historico.SusEmpleados;
                 _appcontext.SaveChanges();
             }
             return historicoEncontrado;

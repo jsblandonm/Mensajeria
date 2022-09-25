@@ -11,7 +11,7 @@ namespace DroneOfTheFuture.App.Persistencia
     {
         // public DbSet<Persona> Personas {get;set;}
         public DbSet<Cliente> Clientes {get;set;}
-        public DbSet<Empleado> Empleados {get;set;}
+        public DbSet<Empleado> Empleado {get;set;}
         public DbSet<Mensajeria> EmpresaDeMensajeria {get;set;}
         public DbSet<Historico> Historicos {get;set;}
         public DbSet<Reportes> Reporte {get;set;}
@@ -27,15 +27,16 @@ namespace DroneOfTheFuture.App.Persistencia
         }
         // protected override void OnModelCreating(ModelBuilder modeloBuilder)
         // {
-        //     // modeloBuilder.Entity<Nombre>()
-        //     // .HasKey(b=>b.Id);
-        //     //relacion uno a muchos
-        //     // modeloBuilder.Entity<Mensajeria>()
-        //     // .HasMany(b=>b.Empleados);
-        //     // .WithOne(b=>b.Empleados);
-        //     // modeloBuilder.Entity<Personas>()
-        //     // .HasMany(b=>b.Empleado)
-        //     // .WithMany(b=>b.Cliente);
+        //     // modeloBuilder.Entity<
+        // //     // modeloBuilder.Entity<Nombre>()
+        // //     // .HasKey(b=>b.Id);
+        // //     //relacion uno a muchos
+        // //     // modeloBuilder.Entity<Mensajeria>()
+        // //     // .HasMany(b=>b.Empleados);
+        // //     // .WithOne(b=>b.Empleados);
+        // //     // modeloBuilder.Entity<Personas>()
+        // //     // .HasMany(b=>b.Empleado)
+        // //     // .WithMany(b=>b.Cliente);
         // }
     }
 }

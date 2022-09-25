@@ -1373,7 +1373,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="DkYGIM/Tv0K5YgQq6l4C1AAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="+QfXqi2/3kCi83JurE6NoAAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">clsEmpresaMensajeria</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">clsMensajeria</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="6q3jVkXlo0ePmvIOohX5KwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -3146,7 +3146,7 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[63]" type="UMLClass" guid="QUC8w5hViUmtLiFbLBdHCQAA">
-<XPD:ATTR name="Name" type="string">clsEmpresaMensajeria</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">clsMensajeria</XPD:ATTR>
 <XPD:REF name="Namespace">eON+Jo/Ce0u85IHQVKlnpAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">RRBdpYDEcEed1yJacL90WgAA</XPD:REF>
@@ -3661,8 +3661,8 @@
 <XPD:REF name="Participant">61K1lrQ3pEGWhKravf+sqQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">Vn+gzRi5AUyxqc1GmQ1p8QAA</XPD:REF>
-<XPD:REF name="Views[1]">ynQcJJOux0KkfD3w9V29QgAA</XPD:REF>
-<XPD:REF name="Views[2]">ZPVpI6Wk6kGs4GZpSpoyIQAA</XPD:REF>
+<XPD:REF name="Views[1]">ZPVpI6Wk6kGs4GZpSpoyIQAA</XPD:REF>
+<XPD:REF name="Views[2]">ynQcJJOux0KkfD3w9V29QgAA</XPD:REF>
 <XPD:REF name="Views[3]">9lG3llSpB06t5P0B0wxt/wAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="en4LDOpt/U28d6Hp7KlmegAA">
@@ -3672,8 +3672,8 @@
 <XPD:REF name="Participant">QUC8w5hViUmtLiFbLBdHCQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">hKOidOJXJkankkGYzTSakgAA</XPD:REF>
-<XPD:REF name="Views[1]">ko1nXXBVcEKvLjj7or3NZgAA</XPD:REF>
-<XPD:REF name="Views[2]">P/fnoh4OP0KNkm5zj+LW3gAA</XPD:REF>
+<XPD:REF name="Views[1]">P/fnoh4OP0KNkm5zj+LW3gAA</XPD:REF>
+<XPD:REF name="Views[2]">ko1nXXBVcEKvLjj7or3NZgAA</XPD:REF>
 <XPD:REF name="Views[3]">22CkWDwZeUWMWEWszAxPWgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>

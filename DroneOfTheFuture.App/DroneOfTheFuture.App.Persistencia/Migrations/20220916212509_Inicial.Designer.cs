@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DroneOfTheFuture.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContexto))]
-    [Migration("20220913203334_Inicial")]
+    [Migration("20220916212509_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,21 +21,6 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("ClienteEmpleado", b =>
-                {
-                    b.Property<int>("LosClientesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("empleadosId")
-                        .HasColumnType("int");
-
-                    b.HasKey("LosClientesId", "empleadosId");
-
-                    b.HasIndex("empleadosId");
-
-                    b.ToTable("ClienteEmpleado");
-                });
-
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Cliente", b =>
                 {
                     b.Property<int>("Id")
@@ -44,32 +29,33 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Apellidos")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ClienteId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Direccion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Identificacion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NumeroDeTelefono")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TipoPersona")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ClienteId");
 
                     b.ToTable("Clientes");
                 });
@@ -82,10 +68,8 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Apellidos")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("EmpleadoId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
@@ -94,12 +78,15 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Identificacion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NumeroDeTelefono")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("SuEmpresaId")
@@ -108,13 +95,16 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     b.Property<string>("TipoPersona")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<int?>("historicoId")
+                        .HasColumnType("int");
 
-                    b.HasIndex("EmpleadoId");
+                    b.HasKey("Id");
 
                     b.HasIndex("SuEmpresaId");
 
-                    b.ToTable("Empleados");
+                    b.HasIndex("historicoId");
+
+                    b.ToTable("Empleado");
                 });
 
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Historico", b =>
@@ -127,15 +117,10 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     b.Property<string>("Satisfacioncliente")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SusEmpleadosId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("SusReportesId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("SusEmpleadosId");
 
                     b.HasIndex("SusReportesId");
 
@@ -240,52 +225,26 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     b.ToTable("Reporte");
                 });
 
-            modelBuilder.Entity("ClienteEmpleado", b =>
-                {
-                    b.HasOne("DroneOfTheFuture.App.Dominio.Cliente", null)
-                        .WithMany()
-                        .HasForeignKey("LosClientesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DroneOfTheFuture.App.Dominio.Empleado", null)
-                        .WithMany()
-                        .HasForeignKey("empleadosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Cliente", b =>
-                {
-                    b.HasOne("DroneOfTheFuture.App.Dominio.Cliente", null)
-                        .WithMany("LosClientes")
-                        .HasForeignKey("ClienteId");
-                });
-
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Empleado", b =>
                 {
-                    b.HasOne("DroneOfTheFuture.App.Dominio.Empleado", null)
-                        .WithMany("empleados")
-                        .HasForeignKey("EmpleadoId");
-
                     b.HasOne("DroneOfTheFuture.App.Dominio.Mensajeria", "SuEmpresa")
                         .WithMany("Empleados")
                         .HasForeignKey("SuEmpresaId");
+
+                    b.HasOne("DroneOfTheFuture.App.Dominio.Historico", "historico")
+                        .WithMany()
+                        .HasForeignKey("historicoId");
+
+                    b.Navigation("historico");
 
                     b.Navigation("SuEmpresa");
                 });
 
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Historico", b =>
                 {
-                    b.HasOne("DroneOfTheFuture.App.Dominio.Empleado", "SusEmpleados")
-                        .WithMany()
-                        .HasForeignKey("SusEmpleadosId");
-
                     b.HasOne("DroneOfTheFuture.App.Dominio.Reportes", "SusReportes")
                         .WithMany()
                         .HasForeignKey("SusReportesId");
-
-                    b.Navigation("SusEmpleados");
 
                     b.Navigation("SusReportes");
                 });
@@ -301,7 +260,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .HasForeignKey("SuEmpresaDeMensajeriaId");
 
                     b.HasOne("DroneOfTheFuture.App.Dominio.Empleado", "SuEncargado")
-                        .WithMany()
+                        .WithMany("losPedidos")
                         .HasForeignKey("SuEncargadoId");
 
                     b.Navigation("SuComprador");
@@ -323,13 +282,11 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Cliente", b =>
                 {
                     b.Navigation("Compras");
-
-                    b.Navigation("LosClientes");
                 });
 
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Empleado", b =>
                 {
-                    b.Navigation("empleados");
+                    b.Navigation("losPedidos");
                 });
 
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Mensajeria", b =>

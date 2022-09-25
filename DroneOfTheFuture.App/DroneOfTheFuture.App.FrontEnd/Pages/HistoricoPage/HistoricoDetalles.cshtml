@@ -1,0 +1,33 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.HistoricoPage.HistoricoDetalles
+@{
+    ViewData["Title"] = "HistoricoDetalles";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <table>
+        <table class=" table">
+            <tr>
+                <th>Satisfaccion del Cliente</th>
+                <th>Nombre del pedido</th>
+                <th>Reportes</th>
+                <th>Estado del Drone</th>
+                <th>Estado del paquete</th>
+                <th>Fecha de envio</th>
+                <th>Temperatura ambiente</th>
+            </tr>
+            <tr>
+                <td>@Model.elHistorico.Satisfacioncliente</td>
+                <td>@Model.elHistorico.SusReportes.pedidos.NombreDelPaquete</td>
+                <td>@Model.elHistorico.SusReportes.NombreDelReporte</td>
+                <td>@Model.elHistorico.SusReportes.EstadoDrone</td>
+                <td>@Model.elHistorico.SusReportes.EstadoPaquete</td>
+                <td>@Model.elHistorico.SusReportes.Fecha</td>
+                <td>@Model.elHistorico.SusReportes.TemperaturaDelaZona</td>
+            </tr>
+        </table>
+    </table>
+</div>
+<a asp-page="./HistoricoList" class="btn-default"> Retornar</a>

@@ -1,18 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace DroneOfTheFuture.App.Dominio
 {
-        public class Persona
+    public class Persona
     {
-        public int Id {get;set;}
-        public string Nombre {get;set;}
-        public string Apellidos {get;set;}
-        public DateTime FechaNacimiento {get;set;}
-        public string NumeroDeTelefono {get;set;}
-        public string Identificacion {get;set;}
-        public ICollection<Cliente> LosClientes{get;set;}
-        public ICollection<Empleado> empleados{get;set;}
-
+        public int Id { get; set; }
+        [Required]
+        public string Nombre { get; set; }
+        [Required]
+        public string Apellidos { get; set; }
+        [Required]
+        public DateTime FechaNacimiento { get; set; }
+        [Required]
+        public string NumeroDeTelefono { get; set; }
+        [Required]
+        public string Identificacion { get; set; }
     }
 }

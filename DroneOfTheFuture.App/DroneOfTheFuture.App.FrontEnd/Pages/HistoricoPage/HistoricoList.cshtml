@@ -1,0 +1,30 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.HistoricoPage.HistoricoList
+@{
+    ViewData["Title"] = "Historico";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <table class="table">
+        <tr>
+            <th>satisfaccion Del Cliente</th>
+            @* <th>Reportes</th> *@
+        </tr>
+        @foreach (var Historico in Model.listaHistoricos)
+        {
+            <tr>
+                <td>@Historico.Satisfacioncliente</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./HistoricoDetalles"
+                    asp-route-idHistorico="@Historico.Id"><i class="fas fas-info-circle"></i>Detalles</a>
+                </td>
+                @* <td>
+                    <a class="btn btn-primary table-btn" asp-page="./HistoricoEdit"
+                    asp-route-idHistorico="@Historico.Id"><i class="fas fas-info-circle"></i>Editar</a>
+                </td> *@
+            </tr>
+        }
+    </table>
+</div>

@@ -33,6 +33,8 @@ namespace DroneOfTheFuture.App.FrontEnd
             // services.AddScoped<IRepositorioPersona,RepositorioPersona>();
             services.AddScoped<IRepositorioReporte,RepositorioReporte>();
 
+            services.AddControllersWithViews();
+
 
         }
 
@@ -54,6 +56,8 @@ namespace DroneOfTheFuture.App.FrontEnd
             app.UseStaticFiles();
 
             app.UseRouting();
+            
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

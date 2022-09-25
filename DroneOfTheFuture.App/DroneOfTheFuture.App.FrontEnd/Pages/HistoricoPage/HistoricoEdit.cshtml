@@ -1,0 +1,76 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.HistoricoPage.HistoricoEdit
+@{
+    ViewData["Title"] = "Crear Historicos";
+    ViewData["Title-2"] = "Editar Historicos";
+
+}
+
+@if (@Model.est)
+{
+    <h1>@ViewData["Title"] </h1>
+}
+else
+{
+    <h1>@ViewData["Title-2"] </h1>
+}
+
+
+@{
+    int idHistorico = Model.historicos.Id;
+}
+
+<h4>@Model.historicos.Satisfacioncliente</h4>
+
+<form method="Post" asp-action="Edit-crear">
+    <input type="hidden" asp-for="historicos.Id" />
+    <div>
+        <label asp-for="historicos.Satisfacioncliente"></label>
+        <input asp-for="historicos.Satisfacioncliente" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.Satisfacioncliente"></span>
+    </div>
+    @*<div class="form-group">
+        <label asp-for="historicos.Apellidos"></label>
+        <input asp-for="historicos.Apellidos" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.Apellidos"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="historicos.Identificacion"></label>
+        <input asp-for="historicos.Identificacion" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.Identificacion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="historicos.FechaNacimiento"></label>
+        <input asp-for="historicos.FechaNacimiento" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.FechaNacimiento"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="historicos.Direccion"></label>
+        <input asp-for="historicos.Direccion" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.Direccion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="historicos.NumeroDeTelefono"></label>
+        <input asp-for="historicos.NumeroDeTelefono" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.NumeroDeTelefono"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="historicos.TipoPersona"></label>
+        <input asp-for="historicos.TipoPersona" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.TipoPersona"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="historicos.Compras"></label>
+        <input asp-for="historicos.Compras" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.Compras"></span>
+    </div> *@
+    <button type="submit" class="btn btn-primary">Guardar</button>
+
+    <a class="btn btn-primary table-btn" asp-page="../PedidosPage/PedidosList" asp-route-ClienteId=@idHistorico>
+        <i class="fas fa-address-book fa-lg" aria-hidden="true">Pedidos</i>
+    </a>
+</form>
+
+
+<a asp-page="./HistoricoList" class="btn-default"> Retornar</a>
+

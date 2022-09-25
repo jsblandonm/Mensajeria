@@ -1,0 +1,80 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.EmpleadosPage.EmpleadosEdit
+@{
+    ViewData["Title"] = "Crear Empleados";
+    ViewData["Title-2"] = "Editar Empleados";
+
+}
+
+@if (@Model.est)
+{
+    <h1>@ViewData["Title"] </h1>
+}
+else
+{
+    <h1>@ViewData["Title-2"] </h1>
+}
+
+
+@{
+    int EmpleadoId = Model.empleados.Id;
+}
+
+<h4>@Model.empleados.Nombre @Model.empleados.Apellidos</h4>
+
+<form method="Post" asp-action="Edit-crear">
+    <input type="hidden" asp-for="empleados.Id" />
+    <div class="form-group">
+        <label asp-for="empleados.Nombre"></label>
+        <input asp-for="empleados.Nombre" class="form-control">
+        <span class="text-danger" asp-validation-for="empleados.Nombre"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="empleados.Apellidos"></label>
+        <input asp-for="empleados.Apellidos" class="form-control">
+        <span class="text-danger" asp-validation-for="empleados.Apellidos"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="empleados.FechaNacimiento"></label>
+        <input asp-for="empleados.FechaNacimiento" class="form-control">
+        <span class="text-danger" asp-validation-for="empleados.FechaNacimiento"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="empleados.NumeroDeTelefono"></label>
+        <input asp-for="empleados.NumeroDeTelefono" class="form-control">
+        <span class="text-danger" asp-validation-for="empleados.NumeroDeTelefono"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="empleados.Identificacion"></label>
+        <input asp-for="empleados.Identificacion" class="form-control">
+        <span class="text-danger" asp-validation-for="empleados.Identificacion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="empleados.TipoPersona"></label>
+        <input asp-for="empleados.TipoPersona" class="form-control">
+        <span class="text-danger" asp-validation-for="empleados.TipoPersona"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="empleados.HorasLaboradas"></label>
+        <input asp-for="empleados.HorasLaboradas" class="form-control">
+        <span class="text-danger" asp-validation-for="empleados.HorasLaboradas"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="empleados.SuEmpresa.NombreEmpresa"></label>
+        <input asp-for="empleados.SuEmpresa.NombreEmpresa" class="form-control">
+        <span class="text-danger" asp-validation-for="empleados.SuEmpresa.NombreEmpresa"></span>
+    </div>
+    @* <div class="form-group">
+        <label asp-for="clientes.Compras"></label>
+        <input asp-for="clientes.Compras" class="form-control">
+        <span class="text-danger" asp-validation-for="clientes.Compras"></span>
+    </div> *@
+    <button type="submit" class="btn btn-primary">Guardar</button>
+
+    <a class="btn btn-primary table-btn" asp-page="../HistoricoPage/HistoricoList" asp-route-empleadoId=@EmpleadoId>
+        <i class="fas fa-address-book fa-lg" aria-hidden="true">Historicos</i>
+    </a>
+</form>
+
+
+<a asp-page="./EmpleadosList" class="btn-default"> Retornar</a>

@@ -1,0 +1,35 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.EmpleadosPage.EmpleadosDetalles
+@{
+    ViewData["Title"] = "EmpleadosDetalles";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <table>
+        <table class="table">
+            <tr>
+                <th>Tipo de Persona</th>
+                <th>Horas laboradas</th>
+                <th>Empresa a la que pertenece</th>
+                <th>Pedido a su cargo</th>
+
+            </tr>
+            <tr>
+                <td>@Model.elEmpleado.TipoPersona</td>
+                <td>@Model.elEmpleado.HorasLaboradas</td>
+                <td>@Model.elEmpleado.SuEmpresa.NombreEmpresa</td> 
+                <td>
+                    @foreach (var pedido in @Model.elEmpleado.losPedidos)
+                    {
+                        <p>
+                            @pedido.NombreDelPaquete
+                        </p>
+                    }
+                </td>
+            </tr>
+        </table>
+    </table>
+</div>
+<a asp-page="./EmpleadosList" class="btn-default"> Retornar</a>

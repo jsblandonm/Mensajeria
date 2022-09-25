@@ -1,0 +1,29 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.PedidosPage.DetallesPedido
+@{
+    ViewData["Title"] = "DetallesPedido";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <table>
+        <table class="table">
+            <tr>
+                <th>Su Pedido</th>
+                <th>Su encargado</th>
+                <th>Su fehca de creacion</th>
+                <th>Su EmpresaDeMensajeria</th>
+                <th>Peso</th>
+
+            </tr>
+            <tr>
+                <td>@Model.elPedido.NombreDelPaquete</td>
+                <td>@Model.elPedido.SuEncargado.Nombre</td>
+                <td>@Model.elPedido.FechaCreacion</td>
+                <td>@Model.elPedido.SuEmpresaDeMensajeria.NombreEmpresa</td>
+                <td>@Model.elPedido.Peso</td>
+            </tr>
+        </table>
+    </table>
+</div>

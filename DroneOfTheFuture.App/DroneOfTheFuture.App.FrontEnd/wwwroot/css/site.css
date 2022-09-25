@@ -13,9 +13,9 @@ a {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  color: black;
+  background-color: aquamarine;
+  border-color: blueviolet;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -43,8 +43,13 @@ html {
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 .25rem .75rem rgba(226, 226, 5, 0.918);
 }
+
+.text{
+  background-color: black;
+}
+
 
 button.accept-policy {
   font-size: 1rem;
@@ -58,10 +63,37 @@ html {
   min-height: 100%;
 }
 
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-color: paleturquoise;
 }
+.center{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 1px rgb(11, 241, 241);
+}
+
+.texto{
+  display: flexbox;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  justify-content: space-around;
+  text-align: justify;
+  font-size: 15px;
+  margin-top: 15px;
+}
+.text-center{
+  text-align: justify;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
