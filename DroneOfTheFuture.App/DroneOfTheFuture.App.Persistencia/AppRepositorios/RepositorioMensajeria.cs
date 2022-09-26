@@ -21,19 +21,19 @@ namespace DroneOfTheFuture.App.Persistencia
 
         public IEnumerable<Mensajeria> GetAllMensajeria()
         {
-            return _appContext.EmpresaDeMensajeria;
+            return _appContext.Mensajeria;
         }
 
         public Mensajeria AddMensajeria(Mensajeria mensajeria)
         {
-            var MensajeriaEncargada = _appContext.EmpresaDeMensajeria.Add(mensajeria);
+            var MensajeriaEncargada = _appContext.Mensajeria.Add(mensajeria);
             _appContext.SaveChanges();
             return MensajeriaEncargada.Entity;
         }
 
         public Mensajeria UpdateMensajeria(Mensajeria mensajeria)
         {
-            var MensajeriaEncontrada = _appContext.EmpresaDeMensajeria.FirstOrDefault(em => em.Id == mensajeria.Id);
+            var MensajeriaEncontrada = _appContext.Mensajeria.FirstOrDefault(em => em.Id == mensajeria.Id);
             if (MensajeriaEncontrada != null)
             {
                 MensajeriaEncontrada.NombreEmpresa = mensajeria.NombreEmpresa;
@@ -51,18 +51,18 @@ namespace DroneOfTheFuture.App.Persistencia
 
         public void DeleteMensajeria(int idMensajeria)
         {
-            var MensajeriaEncontrada = _appContext.EmpresaDeMensajeria.FirstOrDefault(em => em.Id == idMensajeria);
+            var MensajeriaEncontrada = _appContext.Mensajeria.FirstOrDefault(em => em.Id == idMensajeria);
             if (MensajeriaEncontrada == null)
             {
                 return;
             }
-            _appContext.EmpresaDeMensajeria.Remove(MensajeriaEncontrada);
+            _appContext.Mensajeria.Remove(MensajeriaEncontrada);
             _appContext.SaveChanges();
         }
 
         public Mensajeria GetMensajeria(int idMensajeria)
         {
-            return _appContext.EmpresaDeMensajeria.FirstOrDefault(em => em.Id == idMensajeria);
+            return _appContext.Mensajeria.FirstOrDefault(em => em.Id == idMensajeria);
 
         }
     }

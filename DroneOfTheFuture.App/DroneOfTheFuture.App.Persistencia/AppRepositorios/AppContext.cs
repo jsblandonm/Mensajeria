@@ -12,7 +12,7 @@ namespace DroneOfTheFuture.App.Persistencia
         // public DbSet<Persona> Personas {get;set;}
         public DbSet<Cliente> Clientes {get;set;}
         public DbSet<Empleado> Empleado {get;set;}
-        public DbSet<Mensajeria> EmpresaDeMensajeria {get;set;}
+        public DbSet<Mensajeria> Mensajeria {get;set;}
         public DbSet<Historico> Historicos {get;set;}
         public DbSet<Reportes> Reporte {get;set;}
         public DbSet<Pedidos> Pedido {get;set;}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {}
+    "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {
+    "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj",
         "projectName": "DroneOfTheFuture.App.Dominio",
-        "projectPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj",
+        "projectPath": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\DroneOfTheFuture.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\jsbla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jsbla\\Desktop\\Desarrollo de Software\\drofadf\\Developer2022-G18\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\jsbla\\Desktop\\MTIC\\Desarrollo de Software\\Drones_1\\DroneOfTheFuture.App\\DroneOfTheFuture.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jsbla\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -41,6 +41,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

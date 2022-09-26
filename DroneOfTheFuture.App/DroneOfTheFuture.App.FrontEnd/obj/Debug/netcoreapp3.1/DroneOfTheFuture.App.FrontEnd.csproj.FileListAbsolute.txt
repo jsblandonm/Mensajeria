@@ -159,9 +159,11 @@ C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\ClientesPage\ClientesEdit.cshtml.g.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\ClientesPage\ClientesList.cshtml.g.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\EmpleadosPage\EmpleadosDetalles.cshtml.g.cs
+C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\EmpleadosPage\EmpleadosEdit.cshtml.g.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\EmpleadosPage\EmpleadosList.cshtml.g.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\HistoricoPage\HistoricoDetalles.cshtml.g.cs
+C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\HistoricoPage\HistoricoEdit.cshtml.g.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\HistoricoPage\HistoricoList.cshtml.g.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\MensajeriasPage\MensajeriaDetalles.cshtml.g.cs
@@ -184,5 +186,3 @@ C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\staticwebassets\DroneOfTheFuture.App.FrontEnd.StaticWebAssets.xml
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.FrontEnd.dll
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.FrontEnd.pdb
-C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\HistoricoPage\HistoricoEdit.cshtml.g.cs
-C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\EmpleadosPage\EmpleadosEdit.cshtml.g.cs
