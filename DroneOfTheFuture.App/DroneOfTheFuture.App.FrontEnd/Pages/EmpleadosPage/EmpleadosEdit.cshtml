@@ -60,15 +60,43 @@ else
         <span class="text-danger" asp-validation-for="empleados.HorasLaboradas"></span>
     </div>
     <div class="form-group">
+        <label value="0" for="empresaSeleccionada">Seleccione una Empresa </label>
+        <select class="form-select form-select-lg mb-3" asp-for="empleados.MensajeriaId" id="empresaSeleccionada">
+            @* <option value="0" selected>seleccione una opcion</option> *@
+            @foreach (var mensajeria in Model.listadeMenajerias)
+            {
+                <option value="@mensajeria.Id">@mensajeria.NombreEmpresa</option>
+            }
+        </select>
+        <span class="text-danger" asp-validation-for="empleados.MensajeriaId"></span>
+    </div>
+
+    <div>
+        <label value="0" for="historicocorrespondiente">Seleccione una Empresa </label>
+        <select class="form-select form-select-lg mb-3" asp-for="empleados.HistoricoId" id="historicocorrespondiente">
+            <option value="0" selected>seleccione una opcion</option>
+            @foreach (var histrico in Model.losHistoricos)
+            {
+                <option value="@histrico.Id">@histrico.Id</option>
+            }
+        </select>
+        <span class="text-danger" asp-validation-for="empleados.HistoricoId"></span>
+    </div>
+
+
+    @* <div class="form-group">
         <label asp-for="empleados.SuEmpresa.NombreEmpresa"></label>
         <input asp-for="empleados.SuEmpresa.NombreEmpresa" class="form-control">
         <span class="text-danger" asp-validation-for="empleados.SuEmpresa.NombreEmpresa"></span>
-    </div>
+        </div> *@
     @* <div class="form-group">
         <label asp-for="clientes.Compras"></label>
         <input asp-for="clientes.Compras" class="form-control">
         <span class="text-danger" asp-validation-for="clientes.Compras"></span>
-    </div> *@
+        </div> *@
+
+
+
     <button type="submit" class="btn btn-primary">Guardar</button>
 
     <a class="btn btn-primary table-btn" asp-page="../HistoricoPage/HistoricoList" asp-route-empleadoId=@EmpleadoId>

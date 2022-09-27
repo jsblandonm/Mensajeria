@@ -20,7 +20,7 @@ namespace DroneOfTheFuture.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            // AddPersona();
+            AddPersona();
             // AddPersonaNueva();
             // AddCliente();
             // AddEmpleado();
@@ -92,7 +92,7 @@ namespace DroneOfTheFuture.App.Consola
                 EstadoDelPedido = "En Reparto",
                 SuEncargado = empleado,
                 SuComprador = cliente,
-                SuEmpresaDeMensajeria = mensajeria
+                Mensajeria = mensajeria
             };
 
             var clienteactualizar = _repoCliente.GetCliente(cliente.Id);

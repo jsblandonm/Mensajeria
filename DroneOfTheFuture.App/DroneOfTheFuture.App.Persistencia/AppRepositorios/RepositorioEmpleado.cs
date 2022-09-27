@@ -60,6 +60,7 @@ namespace DroneOfTheFuture.App.Persistencia
                 empleadoEncontrado.SuEmpresa = empleado.SuEmpresa;
                 empleadoEncontrado.historico = empleado.historico;
                 empleadoEncontrado.losPedidos = empleado.losPedidos;
+                
                 _appContext.SaveChanges();
             }
             return empleadoEncontrado;

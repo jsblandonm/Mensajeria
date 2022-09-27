@@ -11,6 +11,6 @@ namespace DroneOfTheFuture.App.Dominio
         public string EstadoDelPedido{get;set;}
         public Empleado SuEncargado {get;set;}
         public Cliente SuComprador {get;set;}
-        public Mensajeria SuEmpresaDeMensajeria {get;set;}
+        public Mensajeria Mensajeria {get;set;}
     }
 }

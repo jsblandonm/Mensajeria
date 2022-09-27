@@ -41,7 +41,7 @@ namespace DroneOfTheFuture.App.Persistencia
 
         public Pedidos GetPedidos(int idPedido)
         {
-            return _appContext.Pedido.Where(p => p.Id == idPedido).Include(p => p.SuEncargado).Include(p => p.SuEmpresaDeMensajeria).FirstOrDefault();
+            return _appContext.Pedido.Where(p => p.Id == idPedido).Include(p => p.SuEncargado).Include(p => p.Mensajeria).FirstOrDefault();
 
         }
 
@@ -57,7 +57,7 @@ namespace DroneOfTheFuture.App.Persistencia
                 pedidoEncontrado.EstadoDelPedido = pedidos.EstadoDelPedido;
                 pedidoEncontrado.SuComprador = pedidos.SuComprador;
                 pedidoEncontrado.SuEncargado = pedidos.SuEncargado;
-                pedidoEncontrado.SuEmpresaDeMensajeria = pedidos.SuEmpresaDeMensajeria;
+                pedidoEncontrado.Mensajeria = pedidos.Mensajeria;
                 pedidoEncontrado.SuComprador.Compras = pedidos.SuComprador.Compras;
                 _appContext.SaveChanges();
             }

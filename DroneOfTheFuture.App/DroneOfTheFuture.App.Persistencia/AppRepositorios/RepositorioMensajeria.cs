@@ -62,7 +62,7 @@ namespace DroneOfTheFuture.App.Persistencia
 
         public Mensajeria GetMensajeria(int idMensajeria)
         {
-            return _appContext.Mensajeria.FirstOrDefault(em => em.Id == idMensajeria);
+            return _appContext.Mensajeria.Where(em => em.Id == idMensajeria).Include(h => h.Empleados).FirstOrDefault(em => em.Id == idMensajeria);
 
         }
     }

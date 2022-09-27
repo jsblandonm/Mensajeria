@@ -25,6 +25,7 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.EmpleadosPage
 
         public void OnGet()
         {
+            Console.WriteLine("no entra aca");
             listaEmpleados = repositorioEmpleado.GetAllEmpleado();
             crear = true;
             editar = false;

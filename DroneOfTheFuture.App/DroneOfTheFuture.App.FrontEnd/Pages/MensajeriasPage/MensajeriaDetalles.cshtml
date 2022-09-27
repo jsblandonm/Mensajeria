@@ -16,9 +16,17 @@
             </tr>
             <tr>
                 <td>@Model.laMensajeria.Drones</td>
-                <td>@Model.laMensajeria.Empleados</td>
+                <td>
+                    @foreach (var empleado in @Model.laMensajeria.Empleados)
+                    {
+                        <p>
+                            @empleado.Nombre
+                        </p>
+                    }
+                </td>
                 <td>@Model.laMensajeria.Drieccion</td>
             </tr>
         </table>
     </table>
 </div>
+<a asp-page="./MensajeriaList" class="btn-default"> Retornar</a>

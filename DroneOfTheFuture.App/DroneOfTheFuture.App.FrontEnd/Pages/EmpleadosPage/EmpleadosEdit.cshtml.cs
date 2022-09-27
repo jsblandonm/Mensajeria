@@ -13,17 +13,31 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.EmpleadosPage
     public class EmpleadosEdit : PageModel
     {
         private readonly IRepositorioEmpleado repositorioEmpleado;
+        private readonly IRepositorioMensajeria repositorioMensajeria;
+        private readonly IRepositorioHistorico repositorioHistorico;
         [BindProperty]
         public Empleado empleados { get; set; }
+        [BindProperty]
+        public IEnumerable<Mensajeria> listadeMenajerias { get; set; }
+        [BindProperty]
+        public IEnumerable<Historico> losHistoricos {get;set;}
+        // [BindProperty]
+        // public Mensajeria lamensajeria { get; set; }
+        // [BindProperty]
+        // public Historico elhistorico {get;set;}
         public bool est { get; set; }
-        public EmpleadosEdit(IRepositorioEmpleado repositorioEmpleado)
+        public EmpleadosEdit(IRepositorioEmpleado repositorioEmpleado, IRepositorioMensajeria repositorioMensajeria, IRepositorioHistorico repositorioHistorico)
         {
             this.repositorioEmpleado = repositorioEmpleado;
+            this.repositorioMensajeria = repositorioMensajeria;
+            this.repositorioHistorico = repositorioHistorico;
         }
 
 
         public IActionResult OnGet(int? EmpleadoId, bool estado)
         {
+            this.listadeMenajerias = repositorioMensajeria.GetAllMensajeria();
+            this.losHistoricos = repositorioHistorico.GetAllHistorico();
             est = estado;
             if (EmpleadoId.HasValue)
             {
@@ -48,17 +62,23 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.EmpleadosPage
         public IActionResult OnPost()
         {
 
+
             if (!ModelState.IsValid)
             {
+                Console.WriteLine("entra");
                 return Page();
             }
             if (empleados.Id > 0)
             {
+                Console.WriteLine("actualiza");
+
                 empleados = repositorioEmpleado.UpdateEmpleado(empleados);
             }
             else
             {
+                Console.WriteLine("crear");
                 repositorioEmpleado.AddEmpleado(empleados);
+
             }
             return Page();
         }

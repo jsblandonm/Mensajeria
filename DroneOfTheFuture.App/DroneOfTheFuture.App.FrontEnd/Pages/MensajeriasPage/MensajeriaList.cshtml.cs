@@ -13,14 +13,15 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.MensajeriasPage
     public class MensajeriaList : PageModel
     {
         private readonly IRepositorioMensajeria repositorioMensajeria;
-        public IEnumerable<Mensajeria> listaMensajeria;
+        [BindProperty]
+        public IEnumerable<Mensajeria> listaMensajeria {get;set;}
 
-        public MensajeriaList()
+        public MensajeriaList(IRepositorioMensajeria repositorioMensajeria)
         {
-            repositorioMensajeria = new RepositorioMensajeria();
+            this.repositorioMensajeria = repositorioMensajeria;
         }
 
-        public void OnGet(int MensajeriaId)
+        public void OnGet()
         {
             listaMensajeria = repositorioMensajeria.GetAllMensajeria();
         }
