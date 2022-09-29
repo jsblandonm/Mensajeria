@@ -1,0 +1,39 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.MensajeriasPage.MensajeriaList
+@{
+    ViewData["Title"] = "MensajeriaList";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <table class="table">
+        <tr>
+            <th>Nombre de la Mensajeria</th>
+            <th>Direccion</th>
+            <th>Nit de la Empresa</th>
+        </tr>
+        @foreach (var Mensajeria in Model.listaMensajeria)
+        {
+            <tr>
+                <td>@Mensajeria.NombreEmpresa</td>
+                <td>@Mensajeria.Drieccion</td>
+                <td>@Mensajeria.NitEmpresa</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./MensajeriaDetalles"
+                    asp-route-MensajeriaId="@Mensajeria.Id"><i class="fas fas-info-circle"></i>Detalles</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./MensajeriaEdit" asp-route-idCliente="@Mensajeria.Id"
+                    asp-route-estado="@Model.editar">
+                        <i class="fas fa-info-circle fa-lg">Editar</i>
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    <a class="btn btn-primary table-btn" asp-page="./MensajeriaEdit" asp-route-estado="@Model.crear">
+        <i class="fas fa-info-circle fa-lg">Crear Mensajeria</i>
+    </a>
+</div>

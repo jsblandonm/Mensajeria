@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="text-center">
+    <h1 class="display-4">Bienvenidos</h1>
+    <p>Ingrese a La Tienda y<a href="https://www.mercadolibre.com.co/">Compra tus articulos</a>.</p>
+</div>
+<div>
+    <h1>
+        <img src="https://img.freepik.com/vector-gratis/hombre-recibiendo-paquete-dron_23-2147702671.jpg?w=2000" alt="Drones" class="center">
+    </h1>
+    <h5 class="texto">
+        Las restricciones de circulación que imponen muchas ciudades,los crecientes atascos y retenciones en los
+        momentos pico
+        del día, así como los problemas de estacionamiento en muchas áreas o la limitada flexibilidad que ofrece el
+        transporte
+        por carretera ante las demandas de inmediatez y agilidad de los clientes del siglo XXI.
+        Por todo esto, desarrollamos un sistema como alternativa que solvente todos estos problemas. Y, de paso,
+        ofrezcan un mejor
+        servicio a los consumidores y reduzcan la huella medioambiental en los desplazamientos de mercancías.
+        Drones voladores capaces de entregarnos sus pedidos en la puerta de su casa.
+        Somos comprometidos con la entrega de paquetes y mensajería, tenemos un sistema que comunica en tiempo real el
+        estado
+        del paquete mientras espera por el. Nuestros clientes son la prioridad por ello se asigna un encargado que hace
+        seguimiento del pedido, y el cual está disponible para solventar todas sus dudas.
+    </h5>
+
+</div>
+
+<div  class="table">
+    @if(User.Identity.IsAuthenticated)
+{
+    <table class="table table-sm">
+        @foreach (var claim in User.Claims)
+        {
+            <tr>
+                <td>@claim.Type</td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    </table>
+}
+</div>
+

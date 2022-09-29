@@ -10,9 +10,10 @@ namespace DroneOfTheFuture.App.Persistencia
     public interface IRepositorioPedido
     {
         IEnumerable<Pedidos> GetAllPedido();
-        Pedidos AddPedido (Pedidos pedidos);
-        Pedidos UpdatePedidos (Pedidos pedidos);
+        Pedidos AddPedido (Pedidos pedido);
+        Pedidos UpdatePedidos (Pedidos pedido);
         void DeletePedido(int idPedido);
         Pedidos GetPedidos(int idPedido);
+        // Pedidos ReadPedidos(int idPedido);
     }
 }

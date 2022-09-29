@@ -9,10 +9,13 @@ namespace DroneOfTheFuture.App.Persistencia
 {
     public interface IRepositorioEmpleado
     {
-        IEnumerable<Empleado> GetAllEmpleados();
+        IEnumerable<Empleado> GetAllEmpleado();
         Empleado AddEmpleado(Empleado empleado);
         Empleado UpdateEmpleado(Empleado empleado);
         void DeleteEmpleado(int idEmpleado);
         Empleado GetEmpleado(int idEmpleado);
+        // IEnumerator<Empleado> GetEmpresa(int idEmpleado);
+        // IEnumerable<Empleado> GetPedido();
+        // IEnumerable<Empleado>
     }
 }

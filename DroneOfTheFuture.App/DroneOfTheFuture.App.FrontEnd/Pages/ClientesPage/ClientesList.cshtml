@@ -1,0 +1,40 @@
+﻿@page
+@model ClientesModel;
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="text-center">
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Tipo de Persona</th>
+        </tr>
+
+        @foreach (var cliente in Model.Clientes)
+        {
+            <tr>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Apellidos</td>
+                <td>@cliente.TipoPersona</td>
+                <td><a class="btn btn-primary table-btn" asp-page="./ClientesDetalles" asp-route-idCliente="@cliente.Id">
+                        <i class="fas fas-info-circle"></i>Detalles
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./ClientesEdit" asp-route-idCliente="@cliente.Id"
+                    asp-route-estado="@Model.editar">
+                        <i class="fas fa-info-circle fa-lg">Editar</i>
+                    </a>
+                </td>
+
+            </tr>
+        }
+    </table>
+    <a class="btn btn-primary table-btn" asp-page="./ClientesEdit" asp-route-estado="@Model.crear">
+        <i class="fas fa-info-circle fa-lg">Crear Cliente</i>
+    </a>
+    @* <a asp-page="./ClientesEdit" class="btn btn primary" >Agregar nuevo Cliente</a> *@
+</div>

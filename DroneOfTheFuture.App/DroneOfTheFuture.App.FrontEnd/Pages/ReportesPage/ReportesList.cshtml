@@ -1,0 +1,32 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.ReportesPage.ReportesList
+@{
+    ViewData["Title"] = "ReportesList";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <table class="table">
+        <tr>
+            <th>Nombre del paquete</th>
+            <th>Estado del paquete</th>
+        </tr>
+        @foreach (var Reporte in Model.listaReportes)
+        {
+            <tr>
+                <td>@Reporte.NombreDelReporte</td>
+                <td>@Reporte.EstadoPaquete</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./DetallesReportes" asp-route-ReportesId="@Reporte.Id"><i
+                        class="fas fas-info-circle"></i>Detalles</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./ReportesEdit" asp-route-ReportesId="@Reporte.Id"><i
+                        class="fas fas-info-circle"></i>Editar</a>
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,75 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.PedidosPage.PedidosEdit
+@{
+    ViewData["Title"] = "Crear Pedidos";
+    ViewData["Title-2"] = "Editar Pedidos";
+
+}
+
+@if (@Model.est)
+{
+    <h1>@ViewData["Title"] </h1>
+}
+else
+{
+    <h1>@ViewData["Title-2"] </h1>
+}
+
+
+@{
+    int pedidosId = Model.pedidos.Id;
+}
+
+<h4>@Model.pedidos.NombreDelPaquete</h4>
+
+<form method="Post" asp-action="Edit-crear">
+    <input type="hidden" asp-for="pedidos.Id" />
+    <div>
+        <label asp-for="pedidos.NombreDelPaquete"></label>
+        <input asp-for="pedidos.NombreDelPaquete" class="form-control">
+        <span class="text-danger" asp-validation-for="pedidos.NombreDelPaquete"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="pedidos.FechaCreacion"></label>
+        <input asp-for="pedidos.FechaCreacion" class="form-control">
+        <span class="text-danger" asp-validation-for="pedidos.FechaCreacion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="pedidos.EstadoDelPedido"></label>
+        <input asp-for="pedidos.EstadoDelPedido" class="form-control">
+        <span class="text-danger" asp-validation-for="pedidos.EstadoDelPedido"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="pedidos.Peso"></label>
+        <input asp-for="pedidos.Peso" class="form-control">
+        <span class="text-danger" asp-validation-for="pedidos.Peso"></span>
+    </div>
+    @* <div class="form-group">
+        <label asp-for="pedidos.Mensajeria"></label>
+        <input asp-for="pedidos.Mensajeria" class="form-control">
+        <span class="text-danger" asp-validation-for="pedidos.Mensajeria"></span>
+    </div> *@
+    <div class="form-group">
+        <label asp-for="pedidos.SuComprador"></label>
+        <input asp-for="pedidos.SuComprador" class="form-control">
+        <span class="text-danger" asp-validation-for="pedidos.SuComprador"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="pedidos.SuEncargado"></label>
+        <input asp-for="pedidos.SuEncargado" class="form-control">
+        <span class="text-danger" asp-validation-for="pedidos.SuEncargado"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+
+    @* <a class="btn btn-primary table-btn" asp-page="../PedidosPage/PedidosList" asp-route-pedidosId=@pedidosId>
+        <i class="fas fa-address-book fa-lg" aria-hidden="true">Pedidos</i>
+    </a>
+
+    <a class="btn btn-primary table-btn" asp-page="../HistoricoPage/HistoricoList" asp-route-pedidosId=@pedidosId>
+        <i class="fas fa-address-book fa-lg" aria-hidden="true">Historico</i>
+    </a> *@
+</form>
+
+
+<a asp-page="../EmpleadosPage/EmpleadosList" class="btn-default"> Retornar</a>

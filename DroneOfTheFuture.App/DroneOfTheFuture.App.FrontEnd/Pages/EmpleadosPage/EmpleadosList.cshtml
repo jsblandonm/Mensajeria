@@ -1,0 +1,42 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.EmpleadosPage.EmpleadosList
+@{
+    ViewData["Title"] = "Empleados";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+
+        </tr>
+        @foreach (var empleado in Model.listaEmpleados)
+        {
+            <tr>
+                <td>@empleado.Nombre</td>
+                <td>@empleado.Apellidos</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./EmpleadosDetalles"
+                    asp-route-EmpleadoId="@empleado.Id"><i class="fas fas-info-circle"></i>Detalles</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./EmpleadosEdit" asp-route-EmpleadoId="@empleado.Id"
+                    asp-route-estado="@Model.editar">
+                        <i class="fas fa-info-circle fa-lg">Editar</i>
+                    </a>
+                </td>
+            </tr>
+        }
+        <table>
+            <a class="btn btn-primary table-btn" asp-page="./EmpleadosEdit" asp-route-estado="@Model.crear">
+                <i class="fas fa-info-circle fa-lg">Crear Empleado</i>
+            </a>
+                        <a class="btn btn-primary table-btn" asp-page="../ReportesPage/ReportesList" asp-route-estado="@Model.crear">
+                <i class="fas fa-info-circle fa-lg">Reportes</i>
+            </a>
+        </table>
+    </table>
+</div>
