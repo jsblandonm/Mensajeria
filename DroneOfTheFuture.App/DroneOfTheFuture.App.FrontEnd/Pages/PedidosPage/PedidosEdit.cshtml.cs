@@ -8,39 +8,40 @@ using Microsoft.Extensions.Logging;
 using DroneOfTheFuture.App.Dominio;
 using DroneOfTheFuture.App.Persistencia;
 
-namespace DroneOfTheFuture.App.FrontEnd.Pages.ClientesPage
+namespace DroneOfTheFuture.App.FrontEnd.Pages.PedidosPage
 {
-    public class ClientesEdit : PageModel
+    public class PedidosEdit : PageModel
     {
-        private readonly IRepositorioCliente repositorioCliente;
         private readonly IRepositorioPedido repositorioPedido;
+        private readonly IRepositorioMensajeria repositorioMensajeria;
         [BindProperty]
-        public Cliente clientes { get; set; }
+        public Pedidos pedidos { get; set; }
         [BindProperty]
-        public IEnumerable<Pedidos> compras {get;set;}
+        public Mensajeria lamenasjeria {get;set;}
         public bool est { get; set; }
-        public ClientesEdit(IRepositorioCliente repositorioCliente, IRepositorioPedido repositorioPedido)
+        public PedidosEdit(IRepositorioPedido repositorioPedido,IRepositorioMensajeria repositorioMensajeria)
         {
-            this.repositorioCliente = repositorioCliente;
             this.repositorioPedido = repositorioPedido;
+            this.repositorioMensajeria  = repositorioMensajeria;
         }
 
 
-        public IActionResult OnGet(int? idCliente, bool estado)
+        public IActionResult OnGet(int? pedidosId,int MensajeriaId, bool estado)
         {
-            this.compras = repositorioPedido.GetAllPedido();
+            lamenasjeria = repositorioMensajeria.GetMensajeria(MensajeriaId);
             est = estado;
-            if (idCliente.HasValue)
+            if (pedidosId.HasValue)
             {
-                clientes = repositorioCliente.GetCliente(idCliente.Value);
+                Console.WriteLine("Enrtro");
+                pedidos = repositorioPedido.GetPedidos(pedidosId.Value);
             }
             else
             {
-                clientes = new Cliente();
+                pedidos = new Pedidos();
             }
 
 
-            if (clientes == null)
+            if (pedidos == null)
             {
                 return RedirectToPage("./ErrorBusqueda");
             }
@@ -57,13 +58,13 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.ClientesPage
             {
                 return Page();
             }
-            if (clientes.Id > 0)
+            if (pedidos.Id > 0)
             {
-                clientes = repositorioCliente.UpdateCliente(clientes);
+                pedidos = repositorioPedido.UpdatePedidos(pedidos);
             }
             else
             {
-                repositorioCliente.AddCliente(clientes);
+                repositorioPedido.AddPedido(pedidos);
             }
             return Page();
         }

@@ -29,6 +29,11 @@ else
         <input asp-for="historicos.Satisfacioncliente" class="form-control">
         <span class="text-danger" asp-validation-for="historicos.Satisfacioncliente"></span>
     </div>
+        <div>
+        <label asp-for="historicos.SusReportes.NombreDelReporte"></label>
+        <input asp-for="historicos.SusReportes.NombreDelReporte" class="form-control">
+        <span class="text-danger" asp-validation-for="historicos.SusReportes.NombreDelReporte"></span>
+    </div>
     @*<div class="form-group">
         <label asp-for="historicos.Apellidos"></label>
         <input asp-for="historicos.Apellidos" class="form-control">

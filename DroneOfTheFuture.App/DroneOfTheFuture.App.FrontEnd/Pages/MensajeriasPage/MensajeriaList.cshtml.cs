@@ -14,7 +14,9 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.MensajeriasPage
     {
         private readonly IRepositorioMensajeria repositorioMensajeria;
         [BindProperty]
-        public IEnumerable<Mensajeria> listaMensajeria {get;set;}
+        public IEnumerable<Mensajeria> listaMensajeria { get; set; }
+        public bool crear { get; set; }
+        public bool editar { get; set; }
 
         public MensajeriaList(IRepositorioMensajeria repositorioMensajeria)
         {
@@ -24,6 +26,8 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.MensajeriasPage
         public void OnGet()
         {
             listaMensajeria = repositorioMensajeria.GetAllMensajeria();
+            crear = true;
+            editar = false;
         }
     }
 }

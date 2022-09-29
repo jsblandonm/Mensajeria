@@ -54,7 +54,7 @@ namespace DroneOfTheFuture.App.Persistencia
                 reporteEncontrado.EstadoDrone = reportes.EstadoDrone;
                 reporteEncontrado.EstadoPaquete = reportes.EstadoPaquete;
                 reporteEncontrado.Fecha = reportes.Fecha;
-                reporteEncontrado.pedidos = reportes.pedidos;
+                reporteEncontrado.pedidos.Id = reportes.pedidos.Id;
 
                 _appContext.SaveChanges();
             }

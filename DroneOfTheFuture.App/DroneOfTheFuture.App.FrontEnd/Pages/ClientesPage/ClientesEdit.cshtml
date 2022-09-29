@@ -59,11 +59,24 @@ else
         <input asp-for="clientes.TipoPersona" class="form-control">
         <span class="text-danger" asp-validation-for="clientes.TipoPersona"></span>
     </div>
-    <div class="form-group">
+
+        @* <div>
+        <label value="0" for="compraSeleccionada">Seleccione que desea comprar  </label>
+        <select class="form-select form-select-lg mb-3" asp-for="clientes.Compras" id="compraSeleccionada">
+            <option value="0" selected>seleccione una opcion</option>
+            @foreach (var compras in Model.compras)
+            {
+                <option value="@compras.Id">@compras.NombreDelPaquete</option>
+            }
+        </select>
+        <span class="text-danger" asp-validation-for="clientes.Compras"></span>
+    </div> *@
+
+    @* <div class="form-group">
         <label asp-for="clientes.Compras"></label>
         <input asp-for="clientes.Compras" class="form-control">
         <span class="text-danger" asp-validation-for="clientes.Compras"></span>
-    </div>
+    </div> *@
     <button type="submit" class="btn btn-primary">Guardar</button>
 
     <a class="btn btn-primary table-btn" asp-page="../PedidosPage/PedidosList" asp-route-ClienteId=@ClienteId>

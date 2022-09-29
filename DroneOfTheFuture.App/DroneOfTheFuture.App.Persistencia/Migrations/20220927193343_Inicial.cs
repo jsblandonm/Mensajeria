@@ -127,7 +127,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     TipoPersona = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HorasLaboradas = table.Column<int>(type: "int", nullable: false),
                     MensajeriaId = table.Column<int>(type: "int", nullable: false),
-                    historicoId = table.Column<int>(type: "int", nullable: true),
+                    HistoricoId = table.Column<int>(type: "int", nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -138,11 +138,11 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_Empleado", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Empleado_Historicos_historicoId",
-                        column: x => x.historicoId,
+                        name: "FK_Empleado_Historicos_HistoricoId",
+                        column: x => x.HistoricoId,
                         principalTable: "Historicos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Empleado_Mensajeria_MensajeriaId",
                         column: x => x.MensajeriaId,
@@ -152,9 +152,9 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Empleado_historicoId",
+                name: "IX_Empleado_HistoricoId",
                 table: "Empleado",
-                column: "historicoId");
+                column: "HistoricoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Empleado_MensajeriaId",
@@ -198,7 +198,7 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Empleado_Historicos_historicoId",
+                name: "FK_Empleado_Historicos_HistoricoId",
                 table: "Empleado");
 
             migrationBuilder.DropTable(

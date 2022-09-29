@@ -15,13 +15,13 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages
     public class ClientesModel : PageModel
     {
         private readonly IRepositorioCliente repositorioCliente;
-        
+
         [BindProperty]
         public IEnumerable<Cliente> Clientes { get; set; }
         public bool crear {get;set;}
         public bool editar {get;set;}
 
-        
+
         public ClientesModel(IRepositorioCliente repositorioCliente)
         {
             this.repositorioCliente = repositorioCliente;

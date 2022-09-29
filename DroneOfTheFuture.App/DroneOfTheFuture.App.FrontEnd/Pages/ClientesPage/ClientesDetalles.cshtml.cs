@@ -15,12 +15,12 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.ClientesPage
     public class ClientesDetalles : PageModel
     {
         public readonly IRepositorioCliente repositorioCliente;
-        public readonly IRepositorioPedido repositorioPedido;
+        // public readonly IRepositorioPedido repositorioPedido;
         public Cliente elCliente;
 
         public ClientesDetalles()
         {
-            repositorioPedido = new RepositorioPedidos();
+            // repositorioPedido = new RepositorioPedidos();
             repositorioCliente = new RepositorioCliente();
 
         }

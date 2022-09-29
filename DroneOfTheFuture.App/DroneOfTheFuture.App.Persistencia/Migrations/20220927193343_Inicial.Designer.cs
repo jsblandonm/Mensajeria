@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DroneOfTheFuture.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContexto))]
-    [Migration("20220926230615_Inicial")]
+    [Migration("20220927193343_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,6 +74,9 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("HistoricoId")
+                        .HasColumnType("int");
+
                     b.Property<int>("HorasLaboradas")
                         .HasColumnType("int");
 
@@ -96,14 +99,11 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("historicoId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("MensajeriaId");
+                    b.HasIndex("HistoricoId");
 
-                    b.HasIndex("historicoId");
+                    b.HasIndex("MensajeriaId");
 
                     b.ToTable("Empleado");
                 });
@@ -228,15 +228,17 @@ namespace DroneOfTheFuture.App.Persistencia.Migrations
 
             modelBuilder.Entity("DroneOfTheFuture.App.Dominio.Empleado", b =>
                 {
+                    b.HasOne("DroneOfTheFuture.App.Dominio.Historico", "historico")
+                        .WithMany()
+                        .HasForeignKey("HistoricoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("DroneOfTheFuture.App.Dominio.Mensajeria", "SuEmpresa")
                         .WithMany("Empleados")
                         .HasForeignKey("MensajeriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("DroneOfTheFuture.App.Dominio.Historico", "historico")
-                        .WithMany()
-                        .HasForeignKey("historicoId");
 
                     b.Navigation("historico");
 

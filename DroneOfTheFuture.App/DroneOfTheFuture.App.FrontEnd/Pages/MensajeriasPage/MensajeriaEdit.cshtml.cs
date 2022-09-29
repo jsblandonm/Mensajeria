@@ -8,34 +8,34 @@ using Microsoft.Extensions.Logging;
 using DroneOfTheFuture.App.Dominio;
 using DroneOfTheFuture.App.Persistencia;
 
-namespace DroneOfTheFuture.App.FrontEnd.Pages.HistoricoPage
+namespace DroneOfTheFuture.App.FrontEnd.Pages.MensajeriasPage
 {
-    public class HistoricoEdit : PageModel
+    public class MensajeriaEdit : PageModel
     {
-        private readonly IRepositorioHistorico repositorioHistorico;
+        private readonly IRepositorioMensajeria repositorioMensajeria;
         [BindProperty]
-        public Historico historicos { get; set; }
+        public Mensajeria lamensajeria { get; set; }
         public bool est { get; set; }
-        public HistoricoEdit(IRepositorioHistorico repositorioHistorico)
+        public MensajeriaEdit(IRepositorioMensajeria repositorioMensajeria)
         {
-            this.repositorioHistorico = repositorioHistorico;
+            this.repositorioMensajeria = repositorioMensajeria;
         }
 
 
-        public IActionResult OnGet(int? idHistorico, bool estado)
+        public IActionResult OnGet(int? MensajeriaId, bool estado)
         {
             est = estado;
-            if (idHistorico.HasValue)
+            if (MensajeriaId.HasValue)
             {
-                historicos = repositorioHistorico.GetHistorico(idHistorico.Value);
+                lamensajeria = repositorioMensajeria.GetMensajeria(MensajeriaId.Value);
             }
             else
             {
-                historicos = new Historico();
+                lamensajeria = new Mensajeria();
             }
 
 
-            if (historicos == null)
+            if (lamensajeria == null)
             {
                 return RedirectToPage("./ErrorBusqueda");
             }
@@ -52,13 +52,13 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.HistoricoPage
             {
                 return Page();
             }
-            if (historicos.Id > 0)
+            if (lamensajeria.Id > 0)
             {
-                historicos = repositorioHistorico.UpdateHistorico(historicos);
+                lamensajeria = repositorioMensajeria.UpdateMensajeria(lamensajeria);
             }
             else
             {
-                repositorioHistorico.AddHistorico(historicos);
+                repositorioMensajeria.AddMensajeria(lamensajeria);
             }
             return Page();
         }

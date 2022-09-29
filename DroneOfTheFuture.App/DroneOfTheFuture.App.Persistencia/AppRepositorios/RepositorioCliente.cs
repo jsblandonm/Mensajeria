@@ -10,9 +10,10 @@ namespace DroneOfTheFuture.App.Persistencia
     public class RepositorioCliente : IRepositorioCliente
     {
         private readonly AppContexto _appContext;
+
         public RepositorioCliente(AppContexto appContext)
         {
-            _appContext = appContext;
+            this._appContext = appContext;
         }
         public RepositorioCliente()
         {
@@ -25,6 +26,7 @@ namespace DroneOfTheFuture.App.Persistencia
         public Cliente AddCliente(Cliente cliente)
         {
             var clienteAgregado = _appContext.Clientes.Add(cliente);
+            
             _appContext.SaveChanges();
             return clienteAgregado.Entity;
         }

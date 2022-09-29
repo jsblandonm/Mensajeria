@@ -13,7 +13,7 @@ namespace DroneOfTheFuture.App.Dominio
         [Required]
         public int MensajeriaId { get; set; }
         public Mensajeria SuEmpresa { get; set; }
-        // [Required]
+        [Required]
         public int HistoricoId { get; set; }
         public Historico historico { get; set; }
         // [Required]

@@ -13,7 +13,8 @@ namespace DroneOfTheFuture.App.Persistencia
         {
             _appContext = appContext;
         }
-                public RepositorioPedidos (){
+        public RepositorioPedidos()
+        {
             _appContext = new AppContexto();
         }
         public Pedidos AddPedido(Pedidos pedidos)
@@ -48,7 +49,7 @@ namespace DroneOfTheFuture.App.Persistencia
         public Pedidos UpdatePedidos(Pedidos pedidos)
         {
             var pedidoEncontrado = _appContext.Pedido.FirstOrDefault(p => p.Id == pedidos.Id);
-            if(pedidoEncontrado != null)
+            if (pedidoEncontrado != null)
             {
 
                 pedidoEncontrado.NombreDelPaquete = pedidos.NombreDelPaquete;

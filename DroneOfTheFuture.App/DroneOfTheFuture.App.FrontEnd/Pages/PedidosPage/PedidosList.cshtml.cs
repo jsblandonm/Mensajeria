@@ -13,8 +13,11 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.PedidosPage
     public class PedidosList : PageModel
     {
         public readonly IRepositorioPedido _repoPedido;
+        [BindProperty]
 
-        public IEnumerable<Pedidos> listaPedidos;
+        public IEnumerable<Pedidos> listaPedidos { get; set; }
+        public bool crear { get; set; }
+        public bool editar { get; set; }
 
         public PedidosList()
         {
@@ -24,6 +27,8 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.PedidosPage
         public void OnGet(int pedidosId)
         {
             listaPedidos = _repoPedido.GetAllPedido();
+            crear = true;
+            editar = false;
         }
     }
 }

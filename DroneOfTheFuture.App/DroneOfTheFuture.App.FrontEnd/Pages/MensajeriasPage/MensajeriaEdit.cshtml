@@ -1,0 +1,76 @@
+@page
+@model DroneOfTheFuture.App.FrontEnd.Pages.MensajeriasPage.MensajeriaEdit
+@{
+    ViewData["Title"] = "Crear Mensajeria";
+    ViewData["Title-2"] = "Editar Mensajeria";
+
+}
+
+@if (@Model.est)
+{
+    <h1>@ViewData["Title"] </h1>
+}
+else
+{
+    <h1>@ViewData["Title-2"] </h1>
+}
+
+
+@{
+    int MensajeriaId = Model.lamensajeria.Id;
+}
+
+<h4>@Model.lamensajeria.NombreEmpresa</h4>
+
+<form method="Post" asp-action="Edit-crear">
+    <input type="hidden" asp-for="lamensajeria.Id" />
+    <div>
+        <label asp-for="lamensajeria.NombreEmpresa"></label>
+        <input asp-for="lamensajeria.NombreEmpresa" class="form-control">
+        <span class="text-danger" asp-validation-for="lamensajeria.NombreEmpresa"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="lamensajeria.NitEmpresa"></label>
+        <input asp-for="lamensajeria.NitEmpresa" class="form-control">
+        <span class="text-danger" asp-validation-for="lamensajeria.NitEmpresa"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="lamensajeria.Drieccion"></label>
+        <input asp-for="lamensajeria.Drieccion" class="form-control">
+        <span class="text-danger" asp-validation-for="lamensajeria.Drieccion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="lamensajeria.Empleados"></label>
+        <input asp-for="lamensajeria.Empleados" class="form-control">
+        <span class="text-danger" asp-validation-for="lamensajeria.Empleados"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="lamensajeria.Drones"></label>
+        <input asp-for="lamensajeria.Drones" class="form-control">
+        <span class="text-danger" asp-validation-for="lamensajeria.Drones"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="lamensajeria.EstadoDrone"></label>
+        <input asp-for="lamensajeria.EstadoDrone" class="form-control">
+        <span class="text-danger" asp-validation-for="lamensajeria.EstadoDrone"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+
+    <a class="btn btn-primary table-btn" asp-page="../PedidosPage/PedidosList" asp-route-mensajaeriaId=@MensajeriaId>
+        <i class="fas fa-address-book fa-lg" aria-hidden="true">Pedidos</i>
+    </a>
+        <a class="btn btn-primary table-btn" asp-page="../HistoricoPage/HistoricoList" asp-route-ClienteId=@MensajeriaId>
+        <i class="fas fa-address-book fa-lg" aria-hidden="true">Historico</i>
+    </a>
+        </a>
+        <a class="btn btn-primary table-btn" asp-page="../HistoricoPage/HistoricoEdit" asp-route-ClienteId=@MensajeriaId>
+        <i class="fas fa-address-book fa-lg" aria-hidden="true">Crear Historico</i>
+    </a>
+</form>
+
+
+<a asp-page="./MensajeriaList" class="btn-default"> Retornar</a>
+
+

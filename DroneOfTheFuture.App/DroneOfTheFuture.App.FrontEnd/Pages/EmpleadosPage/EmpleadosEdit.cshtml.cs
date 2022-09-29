@@ -65,18 +65,18 @@ namespace DroneOfTheFuture.App.FrontEnd.Pages.EmpleadosPage
 
             if (!ModelState.IsValid)
             {
-                Console.WriteLine("entra");
+                
                 return Page();
             }
             if (empleados.Id > 0)
             {
-                Console.WriteLine("actualiza");
+                
 
                 empleados = repositorioEmpleado.UpdateEmpleado(empleados);
             }
             else
             {
-                Console.WriteLine("crear");
+            
                 repositorioEmpleado.AddEmpleado(empleados);
 
             }

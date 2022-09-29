@@ -23,9 +23,17 @@
                     <a class="btn btn-primary table-btn" asp-page="./MensajeriaDetalles"
                     asp-route-MensajeriaId="@Mensajeria.Id"><i class="fas fas-info-circle"></i>Detalles</a>
                 </td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./MensajeriaEdit" asp-route-idCliente="@Mensajeria.Id"
+                    asp-route-estado="@Model.editar">
+                        <i class="fas fa-info-circle fa-lg">Editar</i>
+                    </a>
+                </td>
             </tr>
         }
 
     </table>
-
+    <a class="btn btn-primary table-btn" asp-page="./MensajeriaEdit" asp-route-estado="@Model.crear">
+        <i class="fas fa-info-circle fa-lg">Crear Mensajeria</i>
+    </a>
 </div>

@@ -130,6 +130,9 @@ C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfT
 C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.csproj.CopyComplete
 C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.dll
 C:\Users\jsbla\Desktop\Desarrollo de Software\drofadf\Developer2022-G18\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.pdb
+C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.csprojAssemblyReference.cache
+C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.AssemblyInfoInputs.cache
+C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.AssemblyInfo.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\bin\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.exe
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\bin\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.deps.json
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\bin\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.runtimeconfig.json
@@ -190,9 +193,6 @@ C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\bin\Debug\netcoreapp3.1\DroneOfTheFuture.App.Persistencia.dll
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\bin\Debug\netcoreapp3.1\DroneOfTheFuture.App.Persistencia.pdb
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\bin\Debug\netcoreapp3.1\DroneOfTheFuture.App.Dominio.pdb
-C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.csprojAssemblyReference.cache
-C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.AssemblyInfoInputs.cache
-C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.AssemblyInfo.cs
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.csproj.CopyComplete
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.dll
 C:\Users\jsbla\Desktop\MTIC\Desarrollo de Software\Drones_1\DroneOfTheFuture.App\DroneOfTheFuture.App.Consola\obj\Debug\netcoreapp3.1\DroneOfTheFuture.App.Consola.pdb
